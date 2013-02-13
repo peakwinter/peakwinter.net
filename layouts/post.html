@@ -1,0 +1,36 @@
+<% render 'default' do %>
+<section class="content">
+  <h1><%= item[:title] %></h1>
+
+  <section class="byline">
+  <p>Posted <%= get_pretty_date(item) %> on <%= tags_for(@item, { :base_url => '/tags/' }) %></p> 
+  </section>
+
+  <%= yield %>
+
+  <section class="meta">
+    <% unless related_articles.empty? %>
+      <h3>Related Articles</h3>
+        <ul class="archlist">
+            <% related_articles.each do |post| %>
+            <li>
+            <a href="<%= post.path %>"><%= post[:title]%></a>
+            <span class="date"><%= attribute_to_time(post[:created_at]).strftime('%B %-d') %></span>
+            </li>
+            <% end %>
+        </ul>
+    <% end %>
+    <h3>Comments</h3>
+    <section class="foot">
+      <a href="https://twitter.com/<%= $twitter %>" target="_blank">
+        <img src="<%= $avatar_url %>" height="50" width="50" />
+      </a>
+
+      <p>
+        If you have any input on this or any other article you see on the site, I'd love to hear it. <a href="https://twitter.com/<%= $twitter %>" target="_blank">Drop me a line on Twitter</a>, via my <a href="javascript:void(0);" onclick="javascript:window.prompt ('Use the following Tent entity to \'follow\' me in your Tent feed.\nIf you don\'t know what Tent is, find out more at https\:\/\/tent.io.', 'https\:\/\/jcook.cc');">Tent entity</a>, or even <a href="/contact">send me an email</a>.
+      </p>
+
+    </section>
+  </section>
+</section>
+<% end %>

@@ -1,0 +1,17 @@
+---
+title: Archive
+---
+
+<section class="content">
+  <% articles_by_year.each do |year, articles| %>
+    <h2><%= year %></h2>
+    <ul class="archlist">
+    <% articles.each do |post| %>
+        <li>
+            <a href="<%= post.path %>"><%= post[:title]%></a>
+            <span class="date"><%= get_pretty_date(post) %></span>
+        </li>
+    <% end %>
+    </ol>
+  <% end %>
+</section>
