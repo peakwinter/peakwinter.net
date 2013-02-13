@@ -1,8 +1,0 @@
-<% render 'default' do %>
-<% grouped_articles.each do |yearmonth, articles_this_month| %>
-    <h2>Year <%= yearmonth.first %>, month <%= yearmonth.last %></h2>
-    <% articles_this_month.each do |post| %>
-        <h3><%= post[:title] %></h3>
-    <% end %>
-<% end %>
-<% end %>
