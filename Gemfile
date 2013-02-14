@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'pygments.rb'
+gem 'mime-types'
 gem 'adsf'
 gem 'stringex'
 gem 'highline'

@@ -22,12 +22,14 @@ def related_articles
     @item[:tags].each do | tag|
       @items.each do |item|
         if item[:tags] != nil and item[:tags].include? tag
-          article = (articles.select { |a| a[:item] == item }).first
-          if article == nil
-            article = { :item => item }
-            articles << article
-          end
+          if @item[:title] != item[:title]
+            article = (articles.select { |a| a[:item] == item }).first
+            if article == nil
+              article = { :item => item }
+              articles << article
+            end
           article[:count] = (article[:count] || 0) + 1
+          end
         end
       end
     end
