@@ -7650,7 +7650,7 @@ I"ç<?xml version="1.0" encoding="utf-8"?>
 
 &lt;p&gt;KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/img/20131213001.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/20130213001.png" alt=""&gt;&lt;/p&gt;
 
 &lt;p&gt;As of this post, KnockKnock features:&lt;/p&gt;
 
@@ -18129,7 +18129,7 @@ jQuery('.scrollup').click(function(){
 
 <p>KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.</p>
 
-<p><img src="/img/20131213001.png" alt=""></p>
+<p><img src="/img/20130213001.png" alt=""></p>
 
 <p>As of this post, KnockKnock features:</p>
 
@@ -18218,7 +18218,7 @@ I will walk you through the features and functions of the custom framework of na
 
 KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.
 
-![](/img/20131213001.png)
+![](/img/20130213001.png)
 
 As of this post, KnockKnock features:
 
@@ -18240,7 +18240,7 @@ I"Ú	<p>I‚Äôve recently replaced my old WordPress setup with a static site gener
 
 <p>KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.</p>
 
-<p><img src="/img/20131213001.png" alt=""></p>
+<p><img src="/img/20130213001.png" alt=""></p>
 
 <p>As of this post, KnockKnock features:</p>
 

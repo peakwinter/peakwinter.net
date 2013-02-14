@@ -13,7 +13,7 @@ I will walk you through the features and functions of the custom framework of na
 
 KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.
 
-![](/img/20131213001.png)
+![](/img/20130213001.png)
 
 As of this post, KnockKnock features:
 
