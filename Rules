@@ -21,7 +21,11 @@ compile '/tags/*/' do
   layout 'tags'
 end
 
-compile '/feed/*/' do
+compile 'atom' do
+  filter :erb
+end
+
+compile 'sitemap' do
   filter :erb
 end
 
@@ -55,7 +59,11 @@ route '/blog/*' do
   "/#{y}/#{m}/#{slug}/index.html"
 end
 
-route '/feed/*' do
+route 'atom' do
+  item.identifier.chop + '.xml'
+end
+
+route 'sitemap' do
   item.identifier.chop + '.xml'
 end
 
