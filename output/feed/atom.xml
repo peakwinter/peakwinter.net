@@ -2,13 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jcook.cc/</id>
   <title>Jacob Cook</title>
-  <updated>2012-12-18T09:00:00Z</updated>
+  <updated>2013-02-14T02:26:17Z</updated>
   <link rel="alternate" href="https://jcook.cc/"/>
   <link rel="self" href="https://jcook.cc/feed/atom.xml"/>
   <author>
     <name>Jacob Cook</name>
     <uri>https://jcook.cc</uri>
   </author>
+  <entry>
+    <id>tag:jcook.cc,2013-02-13:/2013/02/simple-and-fast-static-site-blogging-with-knockknock/</id>
+    <title type="html">Simple and fast static site blogging with KnockKnock</title>
+    <published>2013-02-14T02:26:17Z</published>
+    <updated>2013-02-14T02:26:17Z</updated>
+    <link rel="alternate" href="https://jcook.cc/2013/02/simple-and-fast-static-site-blogging-with-knockknock/"/>
+    <content type="html">&lt;p&gt;I’ve recently replaced my old WordPress setup with a static site generator called nanoc. For those that don’t know, a static site generator can use automated rules to create simple HTML pages based on the input you give it. These pages can be translated from an easy-to-write language like Markdown, making blogging with a static site generator very easy. It is also gaining popularing among “lightweight” bloggers like myself that don’t require complicated search functions, PHP scripts or other slower and exploitable technologies. Its resulting simplicity is its greatest feature.&lt;/p&gt;
+
+&lt;p&gt;I will walk you through the features and functions of the custom framework of nanoc that I’ve created to easily host a functional blog. This framework is called KnockKnock.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/20131213001.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;As of this post, KnockKnock features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A front page with a list of recent posts and snippets of these posts&lt;/li&gt;
+  &lt;li&gt;Posts with code syntax highlighting and “related articles” based on given post tags&lt;/li&gt;
+  &lt;li&gt;Automatically-generated tag pages when new tags are added&lt;/li&gt;
+  &lt;li&gt;An archives page, sorted by date and grouped by year (best for relatively-infrequent bloggers like many of us!)&lt;/li&gt;
+  &lt;li&gt;Static “About Me” and “Projects” pages, and the ability to add more with relative ease&lt;/li&gt;
+  &lt;li&gt;Social buttons for Github, Twitter, Email, and RSS&lt;/li&gt;
+  &lt;li&gt;CSS theme inspired by the “&lt;a href="https://github.com/holman/left"&gt;Left&lt;/a&gt;” theme for Jeykll by Zach Holman&lt;/li&gt;
+  &lt;li&gt;Command to automatically create new posts with proper taxonomy, borrowed from &lt;a href="http://jakoblaegdsmand.com/blog/2013/01/easy-blogging-with-nanoc/"&gt;Jakob Lægdsmand&lt;/a&gt; and modified&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;KnockKnock is still a work in progress, but I would definitely appreciate input from whoever would like to try it. You can find it on my GitHub page at &lt;a href="https://github.com/jacook/knockknock"&gt;https://github.com/jacook/knockknock&lt;/a&gt;. Feel free to take it apart, break it into tiny pieces, or even submit pull requests when you are able to make improvements.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:jcook.cc,2012-12-18:/2012/12/tent-guide-2/</id>
     <title type="html">Tent Guide #2: Using TentStatus as a Client</title>
@@ -286,49 +315,6 @@ screen bundle &lt;span class="nb"&gt;exec &lt;/span&gt;puma -p 3000&lt;/code&gt;
 &lt;p&gt;It should be mentioned that quite a few features are planned for Tent but have not yet come to fruition. It is still very early in its development and is very buggy. Therefore it’s not quite ready for general use yet, but it’s coming along very nicely on sites like &lt;a href="http://tent.is"&gt;Tent.is&lt;/a&gt;. There are many applications in development for posting and interacting with your Tent data on various platforms. I think Tent has a very promising and competitive future once its server specification gets fleshed out and secured a bit further.&lt;/p&gt;
 
 &lt;p&gt;Soon I will put up a post explaining how to set up an experimental Tent server and to use it to share and store your data.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:jcook.cc,2012-12-06:/2012/12/cypherpunks/</id>
-    <title type="html">What I've Read: Cypherpunks</title>
-    <published>2012-12-06T12:00:00Z</published>
-    <updated>2012-12-06T12:00:00Z</updated>
-    <link rel="alternate" href="https://jcook.cc/2012/12/cypherpunks/"/>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;
-&lt;strong&gt;Authors:&lt;/strong&gt; Julian Assange, Jacob Appelbaum, Andy Müller-Maguhn, and Jérémie Zimmerman&lt;/li&gt;
-  &lt;li&gt;
-&lt;strong&gt;Language:&lt;/strong&gt; English&lt;/li&gt;
-  &lt;li&gt;
-&lt;strong&gt;Genre(s):&lt;/strong&gt; Non-Fiction; Technology (Cryptography, Freedom, Security), Communications, Philosophy&lt;/li&gt;
-  &lt;li&gt;
-&lt;strong&gt;Date of Publication:&lt;/strong&gt; 2012&lt;/li&gt;
-&lt;/ul&gt;&lt;!-- more --&gt;&lt;p&gt;&lt;strong&gt;About the Book (Excerpt):&lt;/strong&gt; &lt;em&gt;“Cypherpunks are activists who advocate the widespread use of strong cryptography (writing in code) as a route to progressive change. Julian Assange, the editor-in-chief of and visionary behind WikiLeaks, has been a leading voice in the cypherpunk movement since its inception in the 1980s. Now, in what is sure to be a wave-making new book, Assange brings together a small group of cutting-edge thinkers and activists from the front line of the battle for cyber-space to discuss whether electronic communications will emancipate or enslave us. Among the topics addressed are: Do Facebook and Google constitute “the greatest surveillance machine that ever existed,” perpetually tracking our location, our contacts and our lives? Far from being victims of that surveillance, are most of us willing collaborators? Are there legitimate forms of surveillance, for instance in relation to the “Four Horsemen of the Infopocalypse” (money laundering, drugs, terrorism and pornography)? And do we have the ability, through conscious action and technological savvy, to resist this tide and secure a world where freedom is something which the Internet helps bring about?”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;My review:&lt;/strong&gt; I eagerly anticipated the release of this book. The chance to be a “fly on the wall” during a conversation of four of the world’s most influential “hackers” and internet activists doesn’t happen everyday. And that is exactly what we are presented with in &lt;em&gt;Cypherpunks.&lt;/em&gt; The book plays out in conversation format, with Julian Assange, Jacob Appelbaum, Andy Müller-Maguhn and Jérémie Zimmerman discussing their own points of view regarding the state of the Internet and the role of government in today’s always-connected society. They each bring their own interesting perspective to the table during the discussion. Reoccurring themes in the book include the encroaching and totalizing force of social networking, the extent of government surveillance programs, and (of course) the threat that organizations like WikiLeaks pose for those in power.&lt;/p&gt;
-
-&lt;p&gt;This book presents us with a “crossroads moment” in the advancement of our technology. The concentration of vast amounts of information by unaccountable corporations like Google and Facebook pose a danger in themselves. However the book highlights the very real problem of “bulk interception” – governments capturing &lt;em&gt;all&lt;/em&gt; data communicated on certain channels and storing it for later use. The capability for bulk interception is very new, and coupled with the fact that we are sharing more information more publicly than ever, there is tremendous cause for concern that common individuals might be targeted for nothing more than using their right to free speech (&lt;em&gt;“Ten years ago this was seen to be a fantasy, this was seen to be something only paranoid people believed in, but the costs of mass interception have now decreased to the point where even a country like Libya with relatively few resources was doing it with French technology”&lt;/em&gt;). Furthermore, many communications systems and social networking platforms are based in the United States, they are subject to the United States government law, and ultimately, its physical control. Laws governing the privacy of this information are loose and often simply ignored. Free communication and the exchange of political ideas online are also at risk from the resulting effects of censorship (&lt;em&gt;“They see the internet like an illness that affects their ability to define reality”&lt;/em&gt;). Other important implications are studied, such as the risks posed to freedom of association and economic exchange.&lt;/p&gt;
-
-&lt;p&gt;I am very pleased to say that this book does not fall into the trap that so many “cypherpunks” and internet activists have fallen into before it: the libertarian fantasy. The never-ending dream within the tech community often focuses on the state as the sole enemy, and tells us that “If only we had a _truly _free market, the consumer would rule, and we would never have any problems with surveillance/privacy/etc.” This hogwash is largely avoided in this book. The merger of state and corporate power is given serious treatment, and the authors pull no punches when it comes to the role that unmitigated capitalism and economic exploitation play in the systematic infringement of rights. While the phrase “free market” is tossed around quite a bit – almost uncomfortably so – the authors make it clear that the “economic freedoms” they emphasize are not predicated on vertically-organized hierarchies of exploitation.&lt;/p&gt;
-
-&lt;p&gt;The four authors do an excellent job of exposing the present architecture of the Internet and modern communications, and demonstrating why every individual should be involved in changing it. Aside from the introduction, the book is not written in a polemic style, and it benefits from the clear and level-headed way in which the authors outline just what is at stake. But at the end of the book we are left with a bit of a black hole. Julian’s powerful statement in the introduction (&lt;em&gt;“Cryptography is the ultimate form of non-violent direct action”&lt;/em&gt;) implies that we merely need to encrypt all of our information everywhere and that will somehow make the surveillance state stop trying… or something. I would like to have read more details about the potential alternatives to the present system. The book is short on specifics for actually encouraging change, both within the “hacker” and tech enthusiast community, and outside of it. There are mentions of some possible actions, like working for more decentralized Internet architectures, however this book is more focused on large-scale demonstrations of “where we are now” rather than how we can get to where we need to be.&lt;/p&gt;
-
-&lt;p&gt;That being said, I found &lt;em&gt;Cypherpunks&lt;/em&gt; to be a very enjoyable and enlightening read. Even though I do not consider myself a layman in the subjects the book presents, I learned quite a bit by reading it. Most of the book is presented in a way that is easy to read and understand, naming and explaining all the acronyms and references that come up for those who may not be as well-versed in the subject matter. I would recommend &lt;em&gt;Cypherpunks&lt;/em&gt; to any political or tech activist interested in learning what the new wave of communications – both for better and for worse – could look like.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;My rating:&lt;/strong&gt; ★★★★&lt;/p&gt;
-
-&lt;hr&gt;&lt;p&gt;&lt;strong&gt;Notable Quotes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Jérémie Zimmerman on the “dumbing down” of technology:&lt;/strong&gt; “&lt;em&gt;I see a difference with what we describe as the spreading of technology, because in the case of the mill and the printing press you had to look at one to understand how it works, whereas now we are increasingly building control inside the technology. The control is built-in. If you look at a modern computer in most cases you cannot even open it to get to know all the components. And all the components are in small cases—you cannot know what they are doing… [Free software/hardware] can contain the function to monitor the user and its data. This is why free software is so important for a free society.&lt;/em&gt;”&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Jacob Appelbaum on oversharing with Facebook:&lt;/strong&gt; &lt;em&gt;“It’s absolute madness to imagine that we give up all of our personal data to these companies, and then the companies have essentially become privatized secret police. And—in the case of Facebook—we even have democratized surveillance. Instead of paying people off the way the Stasi did in East Germany, we reward them as a culture—they get laid now. They report on their friends and then, ‘Hey, so and so got engaged;’ ‘Oh, so and so broke up;’ ‘Oh, I know who to call now.’“&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Julian Assange on why leaving privacy issues to politicians isn’t the only solution:&lt;/strong&gt; “&lt;em&gt;You can have your democratic victories that take place in public, on the surface, but underneath things are still done anyway. Which is to show that I don’t think that policy or legislative reform is the way; although you can’t give the opponent a free kick either, because then they just accelerate. So it is important to check them in various ways, as ACTA is being checked. It slows them down. But even a win in parliament in relation to legislation doesn’t stop this below the surface activity.&lt;/em&gt;”&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Jacob Appelbaum on the morals of social networks:&lt;/strong&gt; &lt;em&gt;“This isn’t about technology at all, it’s about economics. They have decided that it is more important to collaborate with the state and to sell out their users and to violate their privacy and to be a part of the system of control—to be paid back for being a part of the surveillance culture, to be part of the culture of control—than to be resistant to it, and so they become a part of it. They’re complicit and liable.”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Andy Müller-Maguhn on the endgame:&lt;/strong&gt; “&lt;em&gt;We have to stick to our own infrastructure, that’s the important thing to learn here—that if we want to oppose the surveillance state, the one Big Brother, we have to study what that is, whether it is indeed a linking of central states that say, “Hey, if we combine we can gain even more.” And we need to know what our role is here—our role is to keep decentralized, have our own infrastructure, not rely on cloud computing and other bullshit, but have our own thing.&lt;/em&gt;”&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;And finally, Jacob Appelbaum on the benefit that cryptographic security can provide for free speech:&lt;/strong&gt; “&lt;em&gt;The force of nearly all modern authority is derived from violence or the threat of violence. One must acknowledge with cryptography no amount of violence will ever solve a math problem.&lt;/em&gt;”&lt;/p&gt;</content>
   </entry>
 </feed>
 

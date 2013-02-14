@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jacob Cook - Simple and fast static site blogging with KnockKnock</title>
+
+    <meta name="author" content="Jacob Cook" />
+    <meta name="description" content="Personal website and blog for Jacob Cook" />
+
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+    <link rel="stylesheet" href="/css/style-main.css" type="text/css" media="screen and (min-device-width: 851px)" />
+    <link rel="stylesheet" href="/css/style-pyg.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style-mobile.css" type="text/css"  media="screen and (max-device-width: 850px)" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+
+<script type="text/javascript">
+// scroll-to-top button show and hide
+jQuery(document).ready(function(){
+    jQuery(window).scroll(function(){
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.scrollup').fadeIn();
+        } else {
+            jQuery('.scrollup').fadeOut();
+    }
+});
+// scroll-to-top animate
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <section class="sidebar">
+    <a href="/">
+      <img src="https://jcook.cc/img/avatar-red.jpg" height="75" width="75" class="avatar" />
+    </a>
+
+    <section class="name">  
+      <a href="/">Jacob</a><br />
+      <a href="/">Cook</a>
+    </section>
+
+    <section class="meta">
+      <a href="javascript:void(0);" onclick="javascript:window.prompt ('Use the following Tent entity to \'follow\' me in your Tent feed.\nIf you don\'t know what Tent is, find out more at https\:\/\/tent.io.', 'https\:\/\/jcook.cc');"><img src="/img/tent.png" /></a>
+      <a href="https://github.com/jacook" target="_blank"><img src="/img/github.png" /></a>
+      <a href="https://twitter.com/jcookcc" target="_blank"><img src="/img/twitter.png" /></a>
+      <script type="text/javascript" language="javascript">
+      <!--
+      // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+      // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+      // This code is freeware provided these four comment lines remain intact
+      // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+      { coded = "8LhrW@8hrrj.hh"
+        key = "wLmC9P5hZ1TkSqJlFnN4RgpoAjDEV7BHybY6ir08O2GefKQWuaXMtUzcsdxI3v"
+        shift=coded.length
+        link=""
+        for (i=0; i<coded.length; i++) {
+          if (key.indexOf(coded.charAt(i))==-1) {
+            ltr = coded.charAt(i)
+            link += (ltr)
+          }
+          else {     
+            ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+      document.write("<a href='mailto:"+link+"'><img src='/img/email.png' /></a>")
+      }
+    //-->
+    </script><noscript></noscript>
+      <a href="/feed/atom.xml"><img src="/img/rss.png" /></a>
+    </section>
+
+    <section class="nav">
+      <ul>
+        <li><a href='/about/'>About</a></li>
+        <li><a href='/projects/'>Projects</a></li>
+        <li><a href='/archive/'>Blog Archive</a></li>
+      </ul>
+    </section>
+  </section>
+
+  
+<section class="content">
+  <h1>Simple and fast static site blogging with KnockKnock</h1>
+
+  <section class="byline">
+  <p>Posted 13 February 2013 on <a href="/tags/tech" rel="tag">tech</a>, <a href="/tags/blogging" rel="tag">blogging</a>, <a href="/tags/nanoc" rel="tag">nanoc</a>, <a href="/tags/static sites" rel="tag">static sites</a>, <a href="/tags/howto" rel="tag">howto</a></p> 
+  </section>
+
+  <p>I’ve recently replaced my old WordPress setup with a static site generator called nanoc. For those that don’t know, a static site generator can use automated rules to create simple HTML pages based on the input you give it. These pages can be translated from an easy-to-write language like Markdown, making blogging with a static site generator very easy. It is also gaining popularing among “lightweight” bloggers like myself that don’t require complicated search functions, PHP scripts or other slower and exploitable technologies. Its resulting simplicity is its greatest feature.</p>
+
+<p>I will walk you through the features and functions of the custom framework of nanoc that I’ve created to easily host a functional blog. This framework is called KnockKnock.</p>
+
+<!-- more -->
+
+<p>KnockKnock is a framework that was cobbled together by me, mostly my own work and organization, but also borrowing bits from other corners of the nanoc blogosphere. I put it together after noticing that there was not really an easy way for someone starting out to get blogging with nanoc. This puts many different practices together to create a relatively simple yet cohesive and extensible framework.</p>
+
+<p><img src="/img/20131213001.png" alt=""></p>
+
+<p>As of this post, KnockKnock features:</p>
+
+<ul>
+<li>A front page with a list of recent posts and snippets of these posts</li>
+  <li>Posts with code syntax highlighting and “related articles” based on given post tags</li>
+  <li>Automatically-generated tag pages when new tags are added</li>
+  <li>An archives page, sorted by date and grouped by year (best for relatively-infrequent bloggers like many of us!)</li>
+  <li>Static “About Me” and “Projects” pages, and the ability to add more with relative ease</li>
+  <li>Social buttons for Github, Twitter, Email, and RSS</li>
+  <li>CSS theme inspired by the “<a href="https://github.com/holman/left">Left</a>” theme for Jeykll by Zach Holman</li>
+  <li>Command to automatically create new posts with proper taxonomy, borrowed from <a href="http://jakoblaegdsmand.com/blog/2013/01/easy-blogging-with-nanoc/">Jakob Lægdsmand</a> and modified</li>
+</ul><p>KnockKnock is still a work in progress, but I would definitely appreciate input from whoever would like to try it. You can find it on my GitHub page at <a href="https://github.com/jacook/knockknock">https://github.com/jacook/knockknock</a>. Feel free to take it apart, break it into tiny pieces, or even submit pull requests when you are able to make improvements.</p>
+
+  <section class="meta">
+    
+      <h3>Related Articles</h3>
+        <ul class="archlist">
+            
+            <li>
+            <a href="/2013/02/simple-and-fast-static-site-blogging-with-knockknock/">Simple and fast static site blogging with KnockKnock</a>
+            <span class="date">February 13</span>
+            </li>
+            
+            <li>
+            <a href="/2012/12/tent-guide-1/">Tent Guide #1: Setting Up a Tent Server</a>
+            <span class="date">December 9</span>
+            </li>
+            
+            <li>
+            <a href="/2012/12/tent-guide-2/">Tent Guide #2: Using TentStatus as a Client</a>
+            <span class="date">December 18</span>
+            </li>
+            
+        </ul>
+    
+    <h3>Comments</h3>
+    <section class="foot">
+      <a href="https://twitter.com/jcookcc" target="_blank">
+        <img src="https://jcook.cc/img/avatar-red.jpg" height="50" width="50" />
+      </a>
+
+      <p>
+        If you have any input on this or any other article you see on the site, I'd love to hear it. <a href="https://twitter.com/jcookcc" target="_blank">Drop me a line on Twitter</a>, via my <a href="javascript:void(0);" onclick="javascript:window.prompt ('Use the following Tent entity to \'follow\' me in your Tent feed.\nIf you don\'t know what Tent is, find out more at https\:\/\/tent.io.', 'https\:\/\/jcook.cc');">Tent entity</a>, or even <script type="text/javascript" language="javascript">
+      <!--
+      // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+      // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+      // This code is freeware provided these four comment lines remain intact
+      // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+      { coded = "8LhrW@8hrrj.hh"
+        key = "wLmC9P5hZ1TkSqJlFnN4RgpoAjDEV7BHybY6ir08O2GefKQWuaXMtUzcsdxI3v"
+        shift=coded.length
+        link=""
+        for (i=0; i<coded.length; i++) {
+          if (key.indexOf(coded.charAt(i))==-1) {
+            ltr = coded.charAt(i)
+            link += (ltr)
+          }
+          else {     
+            ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+            link += (key.charAt(ltr))
+          }
+        }
+      document.write("<a href='mailto:"+link+"'>send me an email</a>")
+      }
+    //-->
+    </script><noscript></noscript>.
+      </p>
+
+    </section>
+  </section>
+</section>
+
+  
+  <a href="#" class="scrollup">Scroll</a>
+  <section class="colourbar">
+  </section>
+  </body>
+</html>
+
