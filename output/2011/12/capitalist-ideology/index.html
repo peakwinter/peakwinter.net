@@ -10,9 +10,10 @@
 
     <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-    <link rel="stylesheet" href="/css/style-main.css" type="text/css" media="screen and (min-width: 851px)" />
+    <link rel="stylesheet" href="/css/style-main.css" type="text/css" media="only screen and (min-width: 851px) and (max-width: 1023px)" />
+    <link rel="stylesheet" href="/css/style-wide.css" type="text/css" media="only screen and (min-width: 1024px)" />
     <link rel="stylesheet" href="/css/style-pyg.css" type="text/css" />
-    <link rel="stylesheet" href="/css/style-mobile.css" type="text/css"  media="screen and (max-width: 850px)" />
+    <link rel="stylesheet" href="/css/style-mobile.css" type="text/css"  media="only screen and (max-width: 850px)" />
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="/js/jquery.js"></script>
@@ -38,6 +39,7 @@ jQuery('.scrollup').click(function(){
 </head>
 
 <body>
+<div class="main">
   <section class="sidebar">
     <a href="/">
       <img src="https://jcook.cc/img/avatar-red.jpg" height="75" width="75" class="avatar" />
@@ -202,8 +204,9 @@ jQuery('.scrollup').click(function(){
 
   
   <a href="#" class="scrollup">Scroll</a>
+</div>
   <section class="colourbar">
   </section>
-  </body>
+</body>
 </html>
 
