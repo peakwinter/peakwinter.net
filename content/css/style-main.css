@@ -12,7 +12,7 @@ a {
   left: 15px;
   top: 15px;
   width: 200px;
-  font-family: Helvetica, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
   .sidebar a {
     text-decoration: none;
     text-align: center; }
@@ -31,20 +31,20 @@ a {
   .sidebar .name a {
     margin: 10px 0px 20px 0px; 
     font-size: 30px;
-    color: black; }
+    color: #333; }
   .sidebar .meta {
     margin-top: 10px;
     text-align: center; }
   .sidebar .meta a {
     margin-left: 0px;
-    color: black; }
+    color: #333; }
     .sidebar .meta a:hover {
       color: <%= $colour %>; }
   .sidebar .nav {
     margin: 15px 0 0 0; }
     .sidebar .nav a {
       padding: 3px 0;
-      color: black;
+      color: #333;
       font-weight: bold;
       font-size: 12px;
       display: block; }
@@ -64,44 +64,46 @@ a {
   margin-bottom: 50px; }
   .content h1 {
     color: #333;
-    font-family: Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400; }
   .content h1 a {
     color: #111;
     text-decoration: none; }
   .content h2 {
     color: #333;
-    font-family: Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400; }
   .content h2 a {
     color: #111;
     text-decoration: none; }
   .content h3 {
     color: #333;
-    font-family: Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400; }
   .content h3 a {
     color: #111;
     text-decoration: none; }
   .content h4 {
     color: #333;
-    font-family: Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400; }
   .content h4 a {
     color: #111;
     text-decoration: none; }
   .content h1 {
     font-size: 36px;
-    margin: 18px 0 5px 0; }
+    margin: 18px 0 5px 0;
+    line-height: 1.2em; }
   .content h2 {
     font-size: 30px;
     margin-bottom: 15px; }
   .content h3 {
-    color: #777;
+    color: #111;
     font-size: 25px;
     padding-bottom: 5px;
     margin-bottom: 10px; }
   .content p {
+    color: #535353;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 1.2em;
@@ -123,8 +125,9 @@ a {
     background-repeat: repeat-x;
     margin: 2em 3em; }
   .content li {
-    margin-bottom: 10px;
-    line-height: 1.6em; }
+    color: #535353;
+    font-size: 14px;
+    margin-bottom: 10px; }
   .content blockquote {
     font-style: italic;
     font-size: 14px;
@@ -141,23 +144,16 @@ a {
       font-style: normal; }
   .content .byline {
     margin-bottom: 17px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     padding-left: 0px;
     font-size: 17px;
     color: #777; }
     .content .byline .tags {
       float: right; } 
-  .content .aside {
-    background-color: #eeeeee;
-    padding: 14px;
-    font-size: 14px;
-    margin: 5px 0 15px 0;
-    font-family: Helvetica, sans-serif;
-    line-height: 1.6em; }
   .content .listing, .content .archlist {
     margin: 10px 0 0 0;
     padding: 0;
-    font-family: Helvetica, sans-serif; }
+    font-family: "Open Sans", sans-serif; }
     .content .listing ul, .content .archlist ul {
       margin: 0;
       padding: 0; }
@@ -180,14 +176,18 @@ a {
       border-bottom: 0px; }
     .content .listing .date, .content .archlist .date {
       float: right; 
-      color: #777777;}
+      color: #777777;
+      padding-top: 7px;
+      margin-left: 15px; }
+    .content .archlist .date {
+      padding: 0; }
     .content .listing .snippet {
       padding: 8px 0 0 0; 
       margin-top: 0px;
       line-height: 1.7em;
       font-family: "Merriweather", "Book Antiqua", Palatino, serif; }
       .content .listing .snippet .tags, .content .listing .snippet .tags a {
-        font-family: Helvetica, sans-serif; 
+        font-family: "Open Sans", sans-serif; 
         color: #777777; } 
     .content .listing .title {
       font-weight: bold; 
@@ -195,7 +195,7 @@ a {
     .content .listing a {
       text-decoration: none; } 
     .content .listing .title, .content .listing .read-more a {
-      font-family: Helvetica, sans-serif; }
+      font-family: "Open Sans", sans-serif; }
     .content .listing .read-more {
       float: right; } 
     .content .listing a:hover {
@@ -211,7 +211,7 @@ a {
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;
-    font-family: Helvetica, sans-serif; }
+    font-family: "Open Sans", sans-serif; }
     .content .meta p {
       line-height: 1.4;
       font-size: 14px;

@@ -73,3 +73,7 @@ def get_pretty_date(post)
   attribute_to_time(post[:created_at]).strftime('%-d %B %Y')
 end
 
+def get_pretty_date_noyear(post)
+  attribute_to_time(post[:created_at]).strftime('%-d %B')
+end
+

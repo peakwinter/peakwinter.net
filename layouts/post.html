@@ -14,8 +14,8 @@
         <ul class="archlist">
             <% related_articles.each do |post| %>
             <li>
-            <a href="<%= post.path %>"><%= post[:title]%></a>
-            <span class="date"><%= attribute_to_time(post[:created_at]).strftime('%B %-d') %></span>
+              <span class="date"><%= attribute_to_time(post[:created_at]).strftime('%B %-d') %></span>
+              <a href="<%= post.path %>"><%= post[:title]%></a>
             </li>
             <% end %>
         </ul>
