@@ -64,7 +64,7 @@ def get_post_start(post)
   content = post.compiled_content
   if content =~ /\s<!-- more -->\s/
     content = content.partition('<!-- more -->').first +
-    "<div class='read-more'><a href='#{post.path}'>... Read more &#187;</a></div>"
+    "<div class='read-more pull-right'><a href='#{post.path}'>... Read more &#187;</a></div>"
   end
   return content
 end

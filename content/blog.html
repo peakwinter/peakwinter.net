@@ -1,0 +1,15 @@
+---
+title: Blog
+---
+  <% sorted_articles.each do |post| %>
+    <div class="entry">
+      <div>
+        <p class="muted pull-right date"><%= get_pretty_date(post) %></p>
+        <a href="<%= post.path %>">
+            <h3><%= post[:title]%></h3>
+        </a>
+    </div>
+    <p><%= get_post_start(post) %></p>
+    <span class="pull-left"><%= tags_for(post, { :base_url => '/tags/' }) %></span>
+    </div>
+  <% end %>

@@ -1,13 +1,12 @@
 <% render 'default' do %>
-<section class="content">
     <h2><%= @item[:title] %></h2>
     <ul class="archlist">
     <% items_with_tag(@item[:tag]).each do |post| %>
         <li>
-            <a href="<%= post.path %>"><%= post[:title]%></a>
-            <span class="date"><%= get_pretty_date(post) %></span>
+          <span class="date"><%= get_pretty_date(post) %></span>
+          <a href="<%= post.path %>"><%= post[:title]%></a>
         </li>
     <% end %>
-    </ol>
-</section>
+    </ul>
+    </div>
 <% end %>

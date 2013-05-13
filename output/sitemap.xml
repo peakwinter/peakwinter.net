@@ -2,19 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcook.cc/</loc>
-    <lastmod>2013-02-12</lastmod>
+    <lastmod>2013-05-13</lastmod>
   </url>
   <url>
     <loc>https://jcook.cc/about/</loc>
-    <lastmod>2013-02-12</lastmod>
+    <lastmod>2013-05-13</lastmod>
   </url>
   <url>
     <loc>https://jcook.cc/archive/</loc>
-    <lastmod>2013-02-17</lastmod>
-  </url>
-  <url>
-    <loc>https://jcook.cc/atom.xml</loc>
-    <lastmod>2013-02-12</lastmod>
+    <lastmod>2013-05-13</lastmod>
   </url>
   <url>
     <loc>https://jcook.cc/2011/12/reclaiming-space/</loc>
@@ -71,6 +67,22 @@
   <url>
     <loc>https://jcook.cc/2013/02/simple-and-fast-static-site-blogging-with-knockknock/</loc>
     <lastmod>2013-02-13</lastmod>
+  </url>
+  <url>
+    <loc>https://jcook.cc/atom.xml</loc>
+    <lastmod>2013-02-12</lastmod>
+  </url>
+  <url>
+    <loc>https://jcook.cc/blog/</loc>
+    <lastmod>2013-05-13</lastmod>
+  </url>
+  <url>
+    <loc>https://jcook.cc/css/bootstrap-responsive.css</loc>
+    <lastmod>2013-03-01</lastmod>
+  </url>
+  <url>
+    <loc>https://jcook.cc/css/bootstrap.css</loc>
+    <lastmod>2013-05-12</lastmod>
   </url>
   <url>
     <loc>https://jcook.cc/css/style-main.css</loc>
@@ -165,6 +177,10 @@
     <lastmod>2012-12-02</lastmod>
   </url>
   <url>
+    <loc>https://jcook.cc/js/bootstrap.js</loc>
+    <lastmod>2013-03-01</lastmod>
+  </url>
+  <url>
     <loc>https://jcook.cc/js/jquery.js</loc>
     <lastmod>2013-02-12</lastmod>
   </url>
@@ -174,7 +190,7 @@
   </url>
   <url>
     <loc>https://jcook.cc/projects/</loc>
-    <lastmod>2013-02-12</lastmod>
+    <lastmod>2013-05-13</lastmod>
   </url>
   <url>
     <loc>https://jcook.cc/sitemap.xml</loc>
