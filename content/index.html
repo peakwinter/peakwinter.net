@@ -1,4 +1,69 @@
 ---
 title: Home
 ---
-  <p>Home Page</p>
+  <div class="row-fluid">
+  	<div class="span6">
+  		<h3>Welcome!</h3>
+  		<div class="media" id="project">
+  		   <img src="../img/avatar-red.jpg" class="media-object img-polaroid pull-left" height="75" width="75" /></a>
+  		   <div class="media-body">
+  		     <p>Montréal uni student, writer, rabblerouser, Linux/FLOSS/crypto advocate and activist</p>
+  		   </div>
+  		 </div>
+		<h3>Connect</h3>
+		<ul class="nav nav-list">
+			<li><a href="https://twitter.com/jcookcc" target="_blank"><i class="icon-twitter-sign"></i> Twitter</a></li>
+			<li><a href="#tentmodal" data-toggle="modal"><i class="icon-chevron-up"></i> Tent</a></li>
+			<li><a href="https://github.com/jacook" target="_blank"><i class="icon-github-sign"></i> GitHub</a></li>
+			<li><a href="http://ca.linkedin.com/pub/jacob-cook/17/138/5a5/" target="_blank"><i class="icon-linkedin-sign"></i> LinkedIn</a></li>
+			<li><script type="text/javascript" language="javascript">
+    			<!--
+    			// Email obfuscator script 2.1 by Tim Williams, University of Arizona
+    			// Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+    			// This code is freeware provided these four comment lines remain intact
+    			// A wizard to generate this code is at http://www.jottings.com/obfuscator/
+    			{ coded = "8LhrW@8hrrj.hh"
+      			key = "wLmC9P5hZ1TkSqJlFnN4RgpoAjDEV7BHybY6ir08O2GefKQWuaXMtUzcsdxI3v"
+      			shift=coded.length
+      			link=""
+      			for (i=0; i<coded.length; i++) {
+        				if (key.indexOf(coded.charAt(i))==-1) {
+          				ltr = coded.charAt(i)
+          				link += (ltr)
+        				}
+        				else {
+          				ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+          				link += (key.charAt(ltr))
+        				}
+      			}
+    				document.write("<a href='mailto:"+link+"' target='_blank'><i class='icon-envelope-alt'></i> Email</a>")
+    			}
+  			//-->
+  		</script><noscript></noscript></li>
+  		<li><a href="/atom.xml"><i class="icon-rss"></i> Blog Feed</a></li>
+		</ul>
+  	</div>
+  	<div class="span6">
+  		<h3>Projects</h3>
+  		<ul>
+  			<li><strong><a href="https://ark-os.org">arkOS</a></strong> - A system for easily running self-hosting server software on the Raspberry Pi, with a snappy graphical interface.</li>
+  			<li><strong><a href="https://citizenweb.is">The CitizenWeb Project</a></strong> - A mission to fight for a free, open, and decentralized Internet. Aiming to empower everyday internet users with the information and resources they need to take matters into their own hands.</li>
+  			<li><strong><a href="https://github.com/jacook/knockknock">KnockKnock</a></strong> - A simple and clean yet robust blog system for use with the nanoc static site generator.</li>
+  		</ul>
+  	</div>
+  </div>
+  <div id="tentmodal" class="modal hide fade">
+  	<div class="modal-header">
+  		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  		<h3><i class="icon-chevron-up"></i> Follow Me on Tent</h3>
+  	</div>
+  	<div class="modal-body">
+  		<p>Use the following Tent entity to see my posts and project updates in your Tent feed.
+  		If you don't know what Tent is, find out more at <a href="https://tent.io" target="_blank">tent.io</a>.</p>
+  		<br />
+  		<input type="text" value="https://jcook.cc">
+  	</div>
+  	<div class="modal-footer">
+  			<a href="#" class="btn" data-dismiss="modal">Close</a>
+  	</div>
+  </div>

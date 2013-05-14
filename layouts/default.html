@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><%= $firstname %> <%= $lastname %> - <%= @item[:title] %></title>
+    <title>Jacob Cook - <%= @item[:title] %></title>
 
-    <meta name="author" content="<%= $firstname %> <%= $lastname %>" />
-    <meta name="description" content="<%= $description %>" />
+    <meta name="author" content="Jacob Cook" />
+    <meta name="description" content="Personal website and blog for Jacob Cook" />
     <meta name="google-site-verification" content="Wyqe4_FHjA4Zxn6hg9ZC5OQnWObNyu2Hqltr1VHdrbs" />
 
     <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style-pyg.css" type="text/css" />
     <link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
-    <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 
     <style type="text/css">
@@ -52,6 +53,10 @@
       #project {
         margin-bottom: 40px;
       }
+
+      a {
+        outline: 0;
+      }
     </style>
 </head>
 
@@ -60,9 +65,8 @@
   <div class="masthead">
     <ul class="nav nav-pills pull-right">
       <li<% if @item[:title] == 'Home' %> class='active'<% end %>><a href="/">Home</a></li>
-      <li<% if @item[:kind] == 'article' or @item[:title] == 'Blog' %> class='active'<% end %>><a href='/blog/'>Blog</a></li>
       <li<% if @item[:title] == 'About' %> class='active'<% end %>><a href='/about/'>About</a></li>
-      <li<% if @item[:title] == 'Projects' %> class='active'<% end %>><a href='/projects/'>Projects</a></li>
+      <li<% if @item[:kind] == 'article' or @item[:title] == 'Blog' %> class='active'<% end %>><a href='/blog/'>Blog</a></li>
       <li<% if @item[:title] == 'Archive' %> class='active'<% end %>><a href='/archive/'>Archive</a></li>
     </ul>
     <h3 class="muted"><%= $firstname %> <%= $lastname %></h3>
@@ -76,7 +80,6 @@
     </div>
   </div>
   
-  <a href="#" class="scrollup">Scroll</a>
 </div>
 </body>
 </html>
