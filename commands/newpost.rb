@@ -31,7 +31,7 @@ run do |opts, args, cmd|
   timestamp = DateTime.parse(opts[:created_at]).to_time rescue Time.now
   
   # make the full file name
-  filename = "content/blog/#{timestamp.year}-#{'%02d' % timestamp.month}-#{'%02d' % timestamp.day}-#{name.to_url}.md"
+  filename = "content/articles/#{timestamp.year}-#{'%02d' % timestamp.month}-#{'%02d' % timestamp.day}-#{name.to_url}.md"
 
   # check if the file exists, and ask the user what to do in that case
   if File.exist?(filename) && line.ask("#{filename} already exists. Want to overwrite? (y/n)", ['y','n']) == 'n'
