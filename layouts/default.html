@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/css/style-pyg.css" type="text/css" />
-    <link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
@@ -21,13 +20,30 @@
     <style type="text/css">
       body {
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
       }
 
-      /* Custom container */
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 700px;
+      .header {
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+      }
+
+      .footer {
+        padding-top: 19px;
+        color: #777;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 730px;
+        }
       }
       .container-narrow > hr {
         margin: 30px 0;
@@ -58,18 +74,16 @@
 </head>
 
 <body>
-<div class="container-narrow">
-  <div class="masthead">
+<div class="container">
+  <div class="header">
     <ul class="nav nav-pills pull-right">
       <li<% if @item[:title] == 'Home' %> class='active'<% end %>><a href="/">Home</a></li>
       <li<% if @item[:title] == 'About' %> class='active'<% end %>><a href='/about/'>About</a></li>
       <li<% if @item[:kind] == 'article' or @item[:title] == 'Blog' %> class='active'<% end %>><a href='/blog/'>Blog</a></li>
       <li<% if @item[:title] == 'Archive' %> class='active'<% end %>><a href='/archive/'>Archive</a></li>
     </ul>
-    <h3 class="muted">Jacob Cook</h3>
+    <h3 class="text-muted">Jacob Cook</h3>
   </div>
-
-  <hr />
 
   <div class="row-fluid">
     <div class="span12">
