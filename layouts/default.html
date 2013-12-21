@@ -8,69 +8,17 @@
     <meta name="description" content="Personal website and blog for Jacob Cook" />
     <meta name="google-site-verification" content="Wyqe4_FHjA4Zxn6hg9ZC5OQnWObNyu2Hqltr1VHdrbs" />
 
+    <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+
     <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
     <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/css/style-pyg.css" type="text/css" />
+    <link rel="stylesheet" href="/css/app.css" type="text/css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
-
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-
-      .header {
-        border-bottom: 1px solid #e5e5e5;
-      }
-
-      .header h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-      }
-
-      .footer {
-        padding-top: 19px;
-        color: #777;
-        border-top: 1px solid #e5e5e5;
-      }
-
-      @media (min-width: 768px) {
-        .container {
-          max-width: 730px;
-        }
-      }
-      .container-narrow > hr {
-        margin: 30px 0;
-      }
-
-      .date {
-        margin: 10px 0px;
-      }
-
-      .entry {
-        padding-bottom: 60px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid rgb(245,245,245);
-      }
-
-      .post h2, .post h3 {
-        margin-top: 30px;
-      }
-
-      .related {
-        margin-bottom: 30px;
-      }
-
-      a {
-        outline: 0;
-      }
-    </style>
 </head>
 
 <body>
@@ -85,11 +33,7 @@
     <h3 class="text-muted">Jacob Cook</h3>
   </div>
 
-  <div class="row-fluid">
-    <div class="span12">
-      <%= yield %>
-    </div>
-  </div>
+  <%= yield %>
   
 </div>
 </body>
