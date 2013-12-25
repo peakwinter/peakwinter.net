@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="pure-g-r" id="layout">
+    {% include 'sidebar.html' %}
+    <div class="pure-u-3-4">
+        <div class="content">
+            <div class="posts">
+                <h1 class="content-subhead">
+                    {% block pagetitle %}
+                        My Feed
+                    {% endblock pagetitle %}
+                    {% if articles_page.has_previous() %}
+                        &ndash; Page&nbsp;{{ articles_page.number }}
+                    {% endif %}
+                </h1>
+                {% for article in articles_page.object_list %}
+                    {% if article.category == 'statuses' %}
+                        {% include 'status.html' %}
+                    {% else %}
+                        {% include 'post.html' %}
+                    {% endif %}    
+                {% endfor %}
+                {% include 'pagination.html' %}
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
