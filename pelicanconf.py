@@ -5,10 +5,11 @@ from __future__ import unicode_literals
 AUTHOR = u'Jacob Cook'
 SITENAME = u'Jacob Cook'
 AUTHOR_EMAIL = u'jacob@jcook.cc'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'https://peakwinter.net'
+#SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'America/Montreal'
-DEFAULT_DATE_FORMAT = ('%Y-%m-%d')
+DEFAULT_DATE_FORMAT = ('%d %B %Y')
 
 DEFAULT_LANG = u'en'
 
@@ -17,47 +18,33 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
-          ('Python.org', 'http://python.org/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),
-          ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (
-    ('Twitter', 'http://twitter.com/jcookcc'),
-    ('GNU Social', 'https://micro.jcook.cc'),
-    ('Github', 'http://github.com/jacook'),
-    ('LinkedIn', 'http://ca.linkedin.com/pub/jacob-cook/17/138/5a5'),
-    ('Last.fm', 'http://last.fm/user/midnight1617'),
-    ('Email', 'mailto:jacob@jcook.cc'),
-    ('RSS', '/feed'),
-)
-
 DEFAULT_PAGINATION = 10
 
 # Content path.
 PATH = 'content'
 PAGE_DIR = 'pages'
-ARTICLE_DIR = 'posts'
+ARTICLE_DIR = 'articles'
 
 # URL settings
 PAGINATION_PATTERNS = (
-    (1, '{base_name}/', '{base_name}/index.html'),
-    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+    (1, '{base_name}/blog/', '{base_name}/blog/index.html'),
+    (2, '{base_name}/blog/page/{number}/', '{base_name}/blog/page/{number}/index.html'),
 )
-ARTICLE_URL = ('{category}/{slug}/')
-ARTICLE_SAVE_AS = ('{category}/{slug}/index.html')
-PAGE_URL = ('pages/{slug}/')
-PAGE_SAVE_AS = ('pages/{slug}/index.html')
+TEMPLATE_PAGES = {'home.html': 'index.html'}
+ARTICLE_URL = ('blog/{date:%Y}/{slug}/')
+ARTICLE_SAVE_AS = ('blog/{date:%Y}/{slug}/index.html')
+PAGE_URL = ('{slug}/')
+PAGE_SAVE_AS = ('{slug}/index.html')
 PAGE_LANG_SAVE_AS = False
-TAG_URL = ('tag/{slug}/')
-TAG_SAVE_AS = ('tag/{slug}/index.html')
+TAG_URL = ('blog/tag/{slug}/blog/')
+TAG_SAVE_AS = ('blog/tag/{slug}/index.html')
 TAGS_URL = ('tags/')
 TAGS_SAVE_AS = None
-CATEGORY_URL = ('category/{slug}/')
-CATEGORY_SAVE_AS = ('category/{slug}/index.html')
+CATEGORY_SAVE_AS = False
 AUTHOR_SAVE_AS = False
+AUTHORS_SAVE_AS = False
+ARCHIVES_SAVE_AS = False
+CATEGORIES_SAVE_AS = False
 
 # Feed
 #FEED_DOMAIN = SITEURL
@@ -67,9 +54,6 @@ AUTHOR_SAVE_AS = False
 
 # Theme
 THEME = 'theme'
-AVATAR_URL = '/images/avatar.jpg'
-COVER_IMG_URL = '/images/cover.jpg'
-TYPOGRIFY = True
 DEFAULT_PAGINATION = 10
 
 # Plugin

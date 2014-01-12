@@ -2,14 +2,13 @@
 {% block title %}{{ page.title|striptags }} - {{ super() }}{% endblock title %}
 
 {% block content %}
-<div class="pure-g-r" id="layout">
-    {% include 'sidebar.html' %}
-    <div class="pure-u-3-4">
-        <div class="content">
-            <h1 class="content-subhead">{{ page.title }}</h1>
-            <p>{{ page.content }}</p>
+    <div class="container">
+        <div class="fp">
+            <h1><a href="/">Jacob Cook</a></h1>
+            <p><a href="/about" class="link">about</a> &#x2022; <a href="/blog" class="link">blog</a> &#x2022; <a href="https://micro.jcook.cc" class="link">micro</a> &#x2022; <a href="/links" class="link">links</a> &#x2022; <a href="/files/cv.pdf" class="link">cv</a></p>
+        </div>
+        <div class="page-content">
+            {{ page.content }}
         </div>
     </div>
-</div>
-{% include 'footer.html' %}
 {% endblock %}

@@ -15,8 +15,5 @@ I enjoy using computers and the Internet for writing and (occasionally) graphic 
 
 I attended Concordia University in the pursuit of a Bachelor of Sciences in Political Science and the French language. My other interests include photography, film and media studies, travelling, reading, and electronic music.
 
-`Curriculum Vitae (CV)`_
-
 .. _arkOS: https://arkos.io
 .. _The CitizenWeb Project: https://citizenweb.is
-.. _Curriculum Vitae (CV): /files/cv.pdf

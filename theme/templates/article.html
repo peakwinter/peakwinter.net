@@ -11,31 +11,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="pure-g-r" id="layout">
-    {% include 'sidebar.html' %}
-    <div class="pure-u-3-4">
-        <div class="content">
-            {% if article.category == 'articles' %}
-                <section class="post">
-                    <header class="post-header">
-                        <h1>{{ article.title }}</h1>
-                            <p class="post-meta">
-                                meta = {'category': <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>, 'date': {{ article.locale_date }}}
-                                <div class="meta-tags">
-                                    tags = [{% for tag in article.tags %}<a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a><span class="comma">, </span>{% endfor %}]
-                                </div>
-                            </p>
-                    </header>
-                </section>
-                {{ article.content }}
-            {% elif article.category == 'statuses' %}
-                <h2>{{ article.content }}</h2>
-                <p class="post-meta">
-                    meta = {'category': <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>, 'posted': <a href="{{ SITEURL }}/{{ article.url }}">{{ article.date }}</a>}
-                </p>
-            {% endif %}
-            <div class="hr"></div>
-            <a href="#" class="go-top">Go Top</a>
+    <div class="container">
+        <div class="blog-content">
+            <div class="text-center">
+                <h1 class="page-title">Jacob Cook</h1>
+                <small class="blog-nav page-title"><a href="/">Home</a> &#x2022; <a href="/about">About</a> &#x2022; <a href="/blog">Blog</a> &#x2022; <a href="https://micro.jcook.cc">Micro</a> &#x2022; <a href="/links">Links</a> &#x2022; <a href="/files/cv.pdf">CV</a></small>
+            </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1 class="post-title">{{ article.title }}</h1>
+                        <small class="text-muted">
+                            Posted {{ article.locale_date }} under: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}
+                        </small>
+                </header>
+                <hr />
+            {{ article.content }}
+            </section>
+            <a href="#" class="go-top"><i class="fa fa-toggle-up"></i></a>
             {% if DISQUS_SITENAME %}
                 <div class="comments">
                     <div id="disqus_thread"></div>
@@ -56,5 +48,4 @@
             {% include 'footer.html' %}
         </div>
     </div>
-</div>
 {% endblock %}
