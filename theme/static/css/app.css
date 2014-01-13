@@ -38,7 +38,7 @@ a {
 }
 
 .fp {
-	position: absolute;
+	position: fixed;
 	bottom: 40px;
 }
 
@@ -76,6 +76,10 @@ a {
 	font-family: 'Merriweather', serif;
 	font-size: 14px;
 	line-height: 1.4;
+}
+
+.page-content ul {
+	list-style-type: none;
 }
 
 .blog-content {
