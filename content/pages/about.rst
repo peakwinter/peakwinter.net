@@ -4,7 +4,7 @@ About
 :slug: about
 :summary: About me
 
-Hello! My name is Jacob Cook. I am 23 years old and I currently live in Montréal, Québec, Canada. My areas of professional interest are systems administration, software programming, web development and writing/journalism.
+Hello! My name is Jacob Cook. I am 24 years old and I currently live in Montréal, Québec, Canada. My areas of professional interest are systems administration, software programming, web development and writing/journalism.
 
 I am the lead developer and project manager for arkOS_, a project designed to make self-hosting common Web services easy for the general public. I'm also the founder of `The CitizenWeb Project`_: a project that advocates for a freer, more secure, and notably a more decentralized Internet for everyone, and provides technical and educational assistance to further these ends. My work on these projects has been featured in many leading media sites, such as VentureBeat, FastCompany, Der Spiegel, Heise and others.
 
