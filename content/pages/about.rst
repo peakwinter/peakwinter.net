@@ -4,7 +4,7 @@ About
 :slug: about
 :summary: About me
 
-Hello! My name is Jacob Cook. I am 24 years old and I currently live in Montréal, Québec, Canada. My areas of professional interest are systems administration, software programming, web development and writing/journalism.
+Hello! My name is Jacob Cook. I am 25 years old and I currently live in Montréal, Québec, Canada. My areas of professional interest are systems administration, software programming, web development and writing/journalism.
 
 I am the lead developer and project manager for arkOS_, a project designed to make self-hosting common Web services easy for the general public. I'm also the founder of `The CitizenWeb Project`_: a project that advocates for a freer, more secure, and notably a more decentralized Internet for everyone, and provides technical and educational assistance to further these ends. My work on these projects has been featured in many leading media sites, such as VentureBeat, FastCompany, Der Spiegel, Heise and others.
 
@@ -18,7 +18,7 @@ I attended Concordia University in the pursuit of a Bachelor of Sciences in Poli
 	- PGP ID: 0x8F00446AE49F2D26
 	- `Public key available here`_.
 * **XMPP/GChat**: jacob@peakwinter.net
-	- OTR Fingerprint: 500581A2 EBE09D12 FE3404EE F42AD269 2FE80274
+	- OTR Fingerprint: C2CE3ABE AB20C2AA 6B4E377C AF13FAF5 60F1D9CA
 * **IRC**: peakwinter on Freenode
 
 .. _arkOS: https://arkos.io
