@@ -30,6 +30,11 @@ body {
   visibility: hidden;
 }
 
+.jc-nav-brand, .jc-nav-brand:hover, .jc-nav-brand:focus {
+  color: #6b6b6b;
+  font-weight: 700;
+}
+
 .navbar-static-top {
   margin-bottom: 10px;
 }
@@ -37,11 +42,6 @@ body {
 .navbar-default {
   background-color: transparent;
   border: 0;
-}
-
-.jc-nav-brand, .jc-nav-brand:hover, .jc-nav-brand:focus {
-  color: #6b6b6b;
-  font-weight: 700;
 }
 
 .navbar-default .navbar-text {
@@ -202,7 +202,7 @@ blockquote > small {
   }
 
   .jc-home-name {
-    margin-top: 25%;
+    margin-top: 20%;
     font-size: 64px;
     text-align: center;
   }
