@@ -2,12 +2,18 @@
 layout: home
 ---
 
-<section id="about">
-	<div class="container text-center">
-	  <div class="avatar">
-		<img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image">
-		<h1>{{ site.title }}</h1>
-		{% include social.html %}
-	  </div>
+<section id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="jc-home-name">Jacob Cook</p>
+			</div>
+			<div class="col-md-6">
+				<div class="jc-home-avatar">
+					<img class="img-circle" src="/static/img/{{ site.avatar }}">
+				</div>
+			</div>
+		</div>
+		<p class="jc-home-about"><a href="/about">About me</a> &sdot; <a href="/blog">My blog</a> &sdot; <a href="/projects">My projects</a> &sdot; <a href="/talks">My talks</a> &sdot; <a href="/hire">Hire me</a></p>
 	</div>
 </section>

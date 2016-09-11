@@ -2,45 +2,47 @@
 layout: layout
 ---
 
+{% include header.html %}
+
 <div class="container">
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<div class="blog-post">
-				<h3>
-				  <strong><a href="{{ page.url }}">{{ page.title }}</a></strong>
-				</h3>
-			</div>
-			<div class="blog-title">
-				<h4>
-				{{ page.date | date: "%B %e, %Y" }}
-					&nbsp;&nbsp;
-					{% for tag in page.tags %}
-					 <span class="label tag-label">{{ tag }}</span>
-					{% endfor %}
-				</h4>
-			</div>
-			<hr />
-			<div class="blogpost">
-			  {{ content }}
-			   <hr>
-			   <div class="related-posts">
-				   <h5>Related Posts</h5>
-				   {% for post in site.related_posts limit:3 %}
-						<div class="row">
-							 <div class="col-sm-4 col-md-4 col-lg-4">
-								 <h6 style="text-align: right">
-								 	{{ post.date | date: "%B %e, %Y" }}
-								 </h6>
-							 </div>
-							 <div class="col-sm-8 col-md-8 col-lg-8">
-								 <h6 style="text-align: left">
-								 	<strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-								 </h6>
-							 </div>
-						</div>
-					{% endfor %}
-			   </div>
-			</div>
-		</div>
+	<div class="jc-blog-post">
+		<h2 class="jc-blog-title">
+		  <a href="{{ page.url }}">{{ page.title }}</a>
+		</h2>
+	</div>
+	<div class="jc-blog-meta">
+		<h4>
+		{{ page.date | date: "%B %e, %Y" }}
+			&nbsp;&mdash;&nbsp; Filed under:
+			{% for tag in page.tags %}
+			 <a href="/blog/tags/#{{ tag | slugify }}"><span class="label jc-blog-tag">{{ tag }}</span></a>
+			{% endfor %}
+		</h4>
+	</div>
+	<hr />
+	<div class="jc-blog-body">
+	  {{ content }}
+	   <hr />
+		 <h3>Got something to say?</h3>
+		 <p>Let me know what you think by <a href="https://twitter.com/{{ site.twitter }}">Tweeting me</a> or <a href="mailto:{{ site.email }}">sending me an email</a>.
+	   <div class="jc-blog-related">
+		   <h3>Recent Posts</h3>
+		   {% for post in site.related_posts limit:3 %}
+				<div class="row">
+					 <div class="col-sm-3 col-md-3 col-lg-3">
+						 <h4 style="text-align: right">
+						 	{{ post.date | date: "%B %e, %Y" }}
+						</h4>
+					 </div>
+					 <div class="col-sm-9 col-md-9 col-lg-9">
+						 <h4 style="text-align: left">
+						 	<strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+						</h4>
+					 </div>
+				</div>
+			{% endfor %}
+	   </div>
 	</div>
 </div>
+
+{% include footer.html %}
