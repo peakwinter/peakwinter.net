@@ -2,11 +2,11 @@
 layout: post
 title: Firefox OS and Geeksphone - First Impressions
 tags:
-- firefox os
+- mozilla
+- firefoxOS
 - geeksphone
-- peak
+- technology
 - mobile
-- development
 ---
 
 I've been lucky (and persistent) enough to get my hands on a Firefox OS development device, the Geeksphone Peak. This, along with its sister device the Keon, is the first Firefox OS device being sold to the general public. While it is not a "production" phone, I've found it to be a very snappy, fast and intuitive phone. Here are a few of my thoughts about both the device and its new developing operating system, their strengths and weaknesses.

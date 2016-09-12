@@ -21,6 +21,10 @@ layout: layout
 	</div>
 	<hr />
 	<div class="jc-blog-body">
+		{% if page.image %}
+			<img class="img-responsive" src="/assets/images/{{ page.image }}" />
+		{% endif %}
+
 	  {{ content }}
 	   <hr />
 		 <h3>Got something to say?</h3>
@@ -44,5 +48,7 @@ layout: layout
 	   </div>
 	</div>
 </div>
+
+<div class="jc-scroll"><a href="#top">scroll up</a></div>
 
 {% include footer.html %}

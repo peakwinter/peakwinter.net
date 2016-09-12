@@ -5,6 +5,7 @@ tags:
 - internet
 - privacy
 - google
+- technology
 - decentralization
 - rights
 ---
