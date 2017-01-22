@@ -22,4 +22,4 @@ linkedin: peakwinter
 instagram: peakwinter
 
 include: [.well-known]
-exclude: [vendor]
+exclude: [deploy, Gemfile, Gemfile.lock, README.md, LICENSE]
