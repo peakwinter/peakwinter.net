@@ -4,8 +4,8 @@ rvm:
 - 2.2
 env:
   global:
-  - domain: alpha.coderouge.co
-  - site_path: "/var/www/peakwinter/site"
+  - domain: peakwinter.net
+  - site_path: "/var/www/site"
   - secure: DO+0cUS5Zz8d+ceRZew0c/KAjwGc83LF3D7RV6WrgAh+2/QTiHXJStCeHRrpX9seWxZ7sy3z/hma/0fK2xpFb4LCZnHxlEuuSqE8Y8HJ0CFaPv646KojK3rtjJK3Al333HYreD2b5atmqkyBM2vWtdrLC2DFnLWfsUGhJSfqlyZ9jv+ydA9NUiG+7A0DVxhzIP4EKjOJ0iYsZhbUruQJnEvLijSNEO0DnPBFL6dKji7PFI+2hoy/2yMu8EtSmwpC7i09uEOzOYEHfKkLNPPnqbXkwOE5o/1w0ZfMufVZCWv9D3o2EU+GqJvUI+mMagVd3sM0L8lpy2t8TNZLJwGgj9cqTKwxJdFEGZaHcXz7XUy6KTdTj5V7tv4/rlufXI/io8/fJfQkzrbpgcJvVG6hRZ1yerA5sVadjeTrcj5wCkyzhIQ5jx8g7fOn79U4J+aljMhh5zi+Afv91OC/KvAXKPlUM3sHhYAyPwFKFRrJFAzgjqDs5a5vxpalYwgtUUQ4o4b4d0GYvdldYdrQLc31EqMifRrFrCmeW+VAvgZ9W4f7DuIGo5jbqBpbnXt5/RKSmjUrTxh/411f/aD0tnDVeqKIxIc03Vy3uxWQVAXPVg/7VwJxxT7u+5SPPfRsrUj6vQ0HlVGqlZnx24wNezIYVyaSggE9bf+FnxElFOHhEv0=
 script: bundle exec jekyll build
 deploy:
