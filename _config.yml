@@ -1,27 +1,53 @@
-highlighter: pygments
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
-permalink: /blog/:title/
-paginate: 5
-gems: [jekyll-paginate, jekyll-tagging]
-port: 3000
-safe: true
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-url: https://peakwinter.net
-baseurl: "/"
+include: [.well-known]
+exclude: [deploy, Gemfile, Gemfile.lock, README.md, LICENSE]
+
 title: Jacob Cook
-author: Jacob Cook
-description: Personal website and blog
-avatar: profile.jpg
 email: jacob@peakwinter.net
+description: Personal website and blog
+url: https://peakwinter.net
+author:
+  name: Jacob Cook
+  twitter: peakwinter
+  picture: /static/img/profile.jpg
+logo: /static/img/apple-touch-icon.png
+
 keybase: peakwinter
 github: peakwinter
-twitter: peakwinter
+twitter:
+  username: peakwinter
 mastodon: peakwinter
 lastfm: Midnight818
 linkedin: peakwinter
 instagram: peakwinter
 
-include: [.well-known]
-exclude: [deploy, Gemfile, Gemfile.lock, README.md, LICENSE]
+social:
+  name: Jacob Cook
+  links:
+    - https://twitter.com/peakwinter
+    - https://mastodon.social/users/peakwinter
+    - https://instagram.com/peakwinter
+    - https://github.com/peakwinter
+    - https://keybase.io/peakwinter
+    - https://www.last.fm/user/Midngiht818
+    - https://linkedin.com/in/peakwinter
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /static/img/profile.jpg
+
+google_site_verification: "-YXoyanxvJmQwWi-ed8nmVSm222RsGDII4-VtV6H2X0"
+
+permalink: /blog/:title/
+paginate: 5
+port: 3000
+
+highlighter: pygments
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
