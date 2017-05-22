@@ -22,10 +22,15 @@ layout: layout
 	<hr />
 	<div class="jc-blog-body">
 		{% if page.image %}
-			<img class="img-responsive" src="/assets/images/{{ page.image }}" />
+			<img class="img-responsive" src="{{ page.image }}" />
+		{% endif %}
+		{% if page.image_attribution %}
+			<em><small>{{ page.image_attribution | markdownify }}</small></em>
+			<hr />
 		{% endif %}
 
 	  {{ content }}
+
 	   <hr />
 		 <h3>Got something to say?</h3>
 		 <p>Let me know what you think by <a href="https://twitter.com/{{ site.twitter.username }}">Tweeting me</a> or <a href="mailto:{{ site.email }}">sending me an email</a>.

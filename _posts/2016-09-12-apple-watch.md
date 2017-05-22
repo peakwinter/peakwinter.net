@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apple Watch, A Year On"
-image: 20160912001.jpg
+image: /assets/images/20160912001.jpg
 description: Why I'm still not tired of it - and how it's filled a critical role in my life.
 tags:
 - apple
