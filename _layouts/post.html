@@ -21,7 +21,7 @@ layout: layout
 	</div>
 	<hr />
 	<div class="jc-blog-body">
-		{% if page.image %}
+		{% if page.image and page.image != site.author.picture %}
 			<img class="img-responsive" src="{{ page.image }}" />
 		{% endif %}
 		{% if page.image_attribution %}
