@@ -187,6 +187,15 @@ blockquote > small {
   margin: 25px 0;
 }
 
+.jc-blog-body .pull-left img,
+.jc-blog-body .pull-right img {
+  margin: 0 25px;
+}
+
+.jc-blog-body .bottom-divider {
+  margin: 35px 0;
+}
+
 .jc-blog-tag {
   background-color: #295073;
   vertical-align: 10%;

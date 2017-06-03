@@ -48,6 +48,6 @@ paginate: 5
 port: 3000
 
 highlighter: pygments
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions: [smart]
