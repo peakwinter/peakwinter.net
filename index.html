@@ -2,19 +2,12 @@
 layout: home
 ---
 
-<section id="home">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<p class="jc-home-name">{{ site.author.name }}</p>
-			</div>
-			<div class="col-md-6">
-				<div class="jc-home-avatar">
-					<img class="img-circle" src="{{ site.author.picture }}">
-				</div>
-			</div>
+<section id="home" class="frameblock">
+	<div class="page frameblock-inner">
+		<div class="container">
+			<p class="jc-home-name">{{ site.author.name }}</p>
+			<p class="jc-home-about"><a href="/about">About me</a> &sdot; <a href="/blog">My blog</a> &sdot; <a href="/projects">My projects</a> &sdot; <a href="/talks">My talks</a> &sdot; <a href="/hire">Hire me</a></p>
+			<div class="text-center">{% include social.html %}</div>
 		</div>
-		<p class="jc-home-about"><a href="/about">About me</a> &sdot; <a href="/blog">My blog</a> &sdot; <a href="/projects">My projects</a> &sdot; <a href="/talks">My talks</a> &sdot; <a href="/hire">Hire me</a></p>
-		<div class="text-center">{% include social.html %}</div>
 	</div>
 </section>

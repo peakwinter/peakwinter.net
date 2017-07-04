@@ -81,24 +81,35 @@ a {
 
 p {
   margin: 0 0 15px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 72px;
+  font-size: 7rem;
   margin-bottom: 30px;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 72px;
   margin-bottom: 25px;
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 35px 0 30px 0;
+}
+
+h4 {
   font-size: 36px;
-  margin: 25px 0 35px 0;
+  margin: 30px 0 25px 0;
+}
+
+h5 {
+  font-size: 18px;
 }
 
 blockquote {
@@ -130,35 +141,51 @@ blockquote > small {
   text-align: center;
 }
 
+.jc-social {
+  text-align: center;
+}
+
 
 /* Home
 -------------------------------------------------- */
 
+#home {
+  height: 100%;
+}
+
+.frameblock {
+  width: 100%;
+  padding: 25px;
+  background: url('/static/img/cover.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #FFF;
+}
+
+.frameblock a {
+  color: #FFF;
+}
+
+.frameblock-inner {
+  border: 24px solid #FFF;
+}
+
+.page.frameblock-inner {
+  min-height: 100%;
+}
+
 .jc-home-name {
-  margin-top: 50%;
+  margin-top: 30%;
   font-size: 128px;
   font-weight: 700;
   line-height: 1;
-}
-
-.jc-home-avatar {
-  margin-top: 50%;
-  text-align: right;
-}
-
-.jc-home-avatar > .img-circle {
-  max-height: 245px;
 }
 
 .jc-home-about {
   margin-top: 50px;
   font-family: 'Playfair Display', serif;
   font-size: 30px;
-  text-align: center;
-}
-
-.jc-home-about a {
-  color: #6b6b6b;
 }
 
 .jc-home-about a:hover {
@@ -198,6 +225,12 @@ blockquote > small {
 .jc-blog-tag {
   background-color: #295073;
   vertical-align: 10%;
+}
+
+.jc-about-avatar {
+  float: left;
+  max-height: 175px;
+  margin: 0 20px 10px 0;
 }
 
 
