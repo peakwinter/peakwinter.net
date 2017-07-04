@@ -276,11 +276,23 @@ blockquote > small {
 }
 
 @media (max-width: 374px) {
-  .jc-home-avatar > .img-circle {
-    max-height: 175px;
+  .jc-about-avatar {
+    display: none;
+  }
+
+  .jc-home-name {
+    margin-top: 35%;
   }
 
   .jc-home-about {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .frameblock-inner {
+    border-width: 12px;
+  }
+
+  .jc-social h3 {
+    font-size: 28px;
   }
 }
