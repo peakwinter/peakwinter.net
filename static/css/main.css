@@ -236,7 +236,7 @@ blockquote > small {
 }
 
 .jc-about-avatar {
-  float: left;
+  float: right;
   max-height: 175px;
   margin: 0 20px 10px 0;
 }
