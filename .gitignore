@@ -3,8 +3,8 @@
 
 # Jekyll build
 /_site/
+vendor/
 .jekyll-metadata
-Gemfile.lock
 
 # webstorm
 .idea/
