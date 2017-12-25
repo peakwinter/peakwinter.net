@@ -8,29 +8,23 @@ fi
 
 echo "on master ✓"
 
-if [ -z "$domain" ]; then
-    echo "domain" variable not set
+if [ -z "$server" ]; then
+    echo "server" variable not set
     exit 1
 fi
-echo "domain: $domain ✓"
-
-if [ -z "$site_path" ]; then
-    echo "site_path" variable not set
-    exit 1
-fi
-echo "site path: $site_path ✓"
-
-echo "zipping _site to site.zip..."
-(cd _site/ && zip -r - .) > site.zip 2>/dev/null
+echo "deploying to: $server ✓"
 
 echo "decrypting ssh key..."
-openssl aes-256-cbc -k "$deploy_key_pass" -in deploy/deploy_key.enc -out deploy/deploy_key -d
-chmod 400 deploy/deploy_key
+openssl aes-256-cbc -K $encrypted_addab9536e63_key -iv $encrypted_addab9536e63_iv -in deploy/key.enc -out deploy/key -d
+chmod 400 deploy/key
 
 echo "setting StrictHostKeyChecking for all domains..."
 printf "Host *\n    StrictHostKeyChecking no\n" > ~/.ssh/config
 chmod 400 ~/.ssh/config
 
-echo "copying site to $domain..."
-scp -i deploy/deploy_key site.zip deploy@$domain:~/site.zip
-ssh -i deploy/deploy_key deploy@$domain 'rm -rf "'$site_path'"/* && unzip ~/site.zip -d "'$site_path'" && rm ~/site.zip'
+echo "copying site to $server..."
+scp -i deploy/key docker-compose.yml deploy@$server:"$deploy_to"
+ssh -i deploy/key deploy@$server "cd \"$deploy_to\"; docker stack deploy -c docker-compose.yml $project"
+rm -f deploy/key
+
+echo "deployment ✓"

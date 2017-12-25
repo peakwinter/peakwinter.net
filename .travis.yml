@@ -1,10 +1,19 @@
 sudo: true
 language: bash
 services:
-  - docker
+- docker
 
 env:
   global:
-    - secure: "tCZ2WG0pOE4yOWxlCwG0rdma7CrSHjqoeQgEq2BiHdnMmBpb0Qp4RCOCEuF36v3/cQBXJE18OkaulRlQkaVwv9KVn39k0OkOLJmphpBRjISYoAjTwmcNw+3O1733nMR3rcq7OJ2l7c/Sfk5mwHDbk0lbX1N7DYgCpdgYmAtCGhnvhfHqHmihXGpD4a0lek5g0ekb0WeY7/JWCED0fvXUzTYC0vQUNHcbc3lbE3d2copyagNTAqOXdZPXTcdN1Of2nphyImMkZA7yDsKjCMGdCfw+nuSixTZAFwxYvZCjUN0TRxfHXLLF0uQ1AQVm1oZaA9DuDrsLXhruiLwtAZ+/I7m0MFSZZrcR/ltpbxyHlZKQoB865qt9AGBW5iziZ8nfkWML+fI7LkC5xrHoxxeGf9pketYW6OY9ypiR4oo+wEbSQkpH0UITYcKA1dUJRwMzDwlBOcC3hJ5HgkPO9yt3GJfUe+wuh0IoxeR3O6u9FQw/WYFh5GiiMsrwPCqsSHJrD12mnNiNMM5FUQEHtLipEje6fbXjCQ67lKCQK7yBqgQhYZ1MLK4p8whF2lu+Wk/ljYpLat29dxH20z4mdoGE4sPuPdDcTV9ShQpVaeNkFn3jCvUCaAizVTHfe7NM3nz0+gnjT4Xa1w2zLgJZEzkl+mXnBXoBf8JVdb+/MjOt7Go="
+    - project: peakwinternet
+    - server: node01.srv.coderouge.co
+    - deploy_to: /var/data/peakwinter/site
+    - secure: CsqPIiQcb8ebysZ+vrAsC+6Su2KGWrf/RtB/O8RTNe/hkOyK7zmpAhdBa44gT3B6dSIvNp+K+nyviiTWCkjI95jnMeUyUYNP0/yoKwJDbysK8beQn/HxMNhZNrnIgvdBJmJ+Ep/wIR2XlibCwUTAdLdf+jtAiFLIlcJokY8TP7ylddYYrWynXUsbLHroPg/sfmQst/SJLX/VzT8IUOEVeW9Eo2AZlzYlOxyOcfBihsBWZTIroVUhDMDh5Ly0ff1FO8NNDHukfE14RYPnu0KgCJw4EpgvfAGYZLhCXCy81zbZF4mhoWCl97O6G1u18/QaxcDVyuDSnavSJ2XpipPIOTxj9fVeb2e/EMm//g+AA/jfXSNq7pLkOC0/+yUamKhQMbNjB3fHhIWHO+47fcIEVRpVMcSq3sj6iJwImCNQnpzbd2vViLSOLThUpdowksTue2a5DD3Q/oPHwbNQeWIg9k/7wcQQNDkVSRfXAlJ1IO7I68LdX+TYjnS92O9PDGkcPmZr+b66Dl0IRapnxcjj2Xqar4co/LyiolADP7BopKJS+k8SlOIdHhJkbZzrbSLMl/A4QHLrSAOI0U94UjdLriVCoqR19r+/gTogAG3FJKhruYeoap/2fEqDv++GmDDFlDPR0zlYzqm7QI+TqAi0k7M4h/w0xaL5+oAcFhCwY5g=
 
 script: "./deploy/build.sh"
+
+deploy:
+  provider: script
+  script: "./deploy/deploy.sh"
+  on:
+    branch: master
