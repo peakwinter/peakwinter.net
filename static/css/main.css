@@ -254,6 +254,12 @@ blockquote > small {
 /* Responsive
 -------------------------------------------------- */
 
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: -30px;
+  }
+}
+
 @media (max-width: 1199px) {
   .jc-home-name {
     font-size: 4rem;
