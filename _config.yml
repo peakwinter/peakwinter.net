@@ -47,7 +47,8 @@ permalink: /blog/:title/
 paginate: 5
 port: 3000
 
-highlighter: pygments
-markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 rdiscount:
   extensions: [smart]

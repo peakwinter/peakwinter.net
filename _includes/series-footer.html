@@ -1,8 +1,8 @@
 <hr class="bottom-divider" />
 
-<h4>Part {{ include.series.part }} of {{ include.series.total }} of the <strong>{{ include.series.name }}</strong> series.</h4>
-
 {% if include.series.total %}
+<h4>Part {{ include.series.part }} of {{ include.series.total }} of the {{ include.series.name }} series.</h4>
+
 <p>Other articles in this series:</p>
 {% for post in site.posts %}
 {% if post.series and post.series.name == include.series.name and post.series.part != include.series.part %}
@@ -12,7 +12,10 @@
        {{ post.date | date: "%B %e, %Y" }}
      </h5>
     </div>
-    <div class="col-sm-9 col-md-9 col-lg-9">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <h5 class="text-center">Part {{ post.series.part }}</j5>
+    </div>
+    <div class="col-sm-7 col-md-7 col-lg-7">
       <h5 style="text-align: left">
        <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
      </h5>
@@ -20,4 +23,8 @@
  </div>
 {% endif %}
 {% endfor %}
+
+{% else %}
+<h4>Part of the {{ include.series.name }} series.</h4>
+<p>This series is just getting started &mdash; check back later for more articles!</p>
 {% endif %}

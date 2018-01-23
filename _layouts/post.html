@@ -31,14 +31,13 @@ layout: layout
 
 	  {{ content }}
 
+		{% if page.series %}
+			{% include series-footer.html series=page.series %}
+		{% endif %}
+
 	   <hr class="bottom-divider" />
 		 <h3>Got something to say?</h3>
 		 <p>Let me know what you think by <a href="https://twitter.com/{{ site.twitter.username }}">Tweeting me 🐦</a>, <a href="https://mastodon.social/@{{ site.mastodon }}">tooting at me 🎺</a>, or <a href="mailto:{{ site.email }}">sending an email 📨</a>.
-
-	  {% if page.series and page.series.total %}
-			{% include series-footer.html series=page.series %}
-			<hr class="bottom-divider" />
-		{% endif %}
 
 		 <div class="jc-blog-related">
 		   <h4>Recent Posts</h4>
