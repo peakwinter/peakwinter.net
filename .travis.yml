@@ -1,19 +1,23 @@
-sudo: true
-language: bash
-services:
-- docker
+language: ruby
+rvm:
+  - 2.4.1
+cache: bundler
 
 env:
   global:
-    - project: peakwinternet
-    - server: node01.srv.coderouge.co
-    - deploy_to: /var/data/peakwinter/site
-    - secure: CsqPIiQcb8ebysZ+vrAsC+6Su2KGWrf/RtB/O8RTNe/hkOyK7zmpAhdBa44gT3B6dSIvNp+K+nyviiTWCkjI95jnMeUyUYNP0/yoKwJDbysK8beQn/HxMNhZNrnIgvdBJmJ+Ep/wIR2XlibCwUTAdLdf+jtAiFLIlcJokY8TP7ylddYYrWynXUsbLHroPg/sfmQst/SJLX/VzT8IUOEVeW9Eo2AZlzYlOxyOcfBihsBWZTIroVUhDMDh5Ly0ff1FO8NNDHukfE14RYPnu0KgCJw4EpgvfAGYZLhCXCy81zbZF4mhoWCl97O6G1u18/QaxcDVyuDSnavSJ2XpipPIOTxj9fVeb2e/EMm//g+AA/jfXSNq7pLkOC0/+yUamKhQMbNjB3fHhIWHO+47fcIEVRpVMcSq3sj6iJwImCNQnpzbd2vViLSOLThUpdowksTue2a5DD3Q/oPHwbNQeWIg9k/7wcQQNDkVSRfXAlJ1IO7I68LdX+TYjnS92O9PDGkcPmZr+b66Dl0IRapnxcjj2Xqar4co/LyiolADP7BopKJS+k8SlOIdHhJkbZzrbSLMl/A4QHLrSAOI0U94UjdLriVCoqR19r+/gTogAG3FJKhruYeoap/2fEqDv++GmDDFlDPR0zlYzqm7QI+TqAi0k7M4h/w0xaL5+oAcFhCwY5g=
+    - JEKYLL_ENV: production
+    - secure: "gTQGvOuVpn1qbtLxCivs+EGpbrgeNGe3Zg4buf53pLWfUsN5fZ7PleegCb9Io2Gq9/64pINNZ7bNiALvWXO54SKVe+LYpp4QtBp519hg8Ezfp4EbYr8hG+HZsQk0Nk5SnmKImLK3zAkZChd8c+9/7W7J+nO+FrC59e8UrHrlzbAokYhULK8crgywDZjupG/A50Y2S0RZuZQrwtiOb09IQiTwBLVEFtRXDywQiiBpAQo8NIL/aODo1cKvC6ZQ2bT/XmorXDXQ4pNKreA9gz+FSRFj8kgwdPyvcShcVuOBmt2yvkPRP+dBWxcP9MHliTqrqvOFbY9pOGWcI+/IWxB1w6nvEdFuPY8UDjy0b4p2tvV/s7/+psA5bj0omrT9Zwu1ZdyufO2LoWGi2uWW6DX+5mU50+UMlACSKUNfSSQ5cGdrq0IExbK0Cb4mZTrIP8mIN+lbfpv+vui78bNA3KF9LdDzfpOQmeqv2Ro2dFCkO42u6NdIdlYIUOnKAZms0GYvCfr7483+lcqtNA8V4bwErk7fIc5OxcxoBK9TF1NvHBlKD1CjAiSmHo74xMsNntcNMx9fmbjv6nnKSIhShgT8Yvkat+vMUpmpasZl4qMonWVDMDoc9eSIvfnqfg/edVO8QYPeJ3ODLK8hdL/r8FuA24kqFyggPg0f6cn0pD5Q72A="
 
-script: "./deploy/build.sh"
+install: bundler install
+script: jekyll build
 
 deploy:
-  provider: script
-  script: "./deploy/deploy.sh"
+  provider: s3
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+  bucket: "jac-peakwinter-net"
+  region: "ca-central-1"
+  skip_cleanup: true
+  local_dir: _site
   on:
     branch: master

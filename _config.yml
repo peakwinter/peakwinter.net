@@ -3,7 +3,7 @@ gems:
   - jekyll-paginate
 
 include: [.well-known]
-exclude: [deploy, Gemfile, Gemfile.lock, README.md, LICENSE, vendor]
+exclude: [deploy, Gemfile, Gemfile.lock, README.md, LICENSE, vendor, Dockerfile, docker-compose.yml]
 
 title: Jacob Cook
 email: jacob@peakwinter.net
