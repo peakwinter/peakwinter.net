@@ -12,3 +12,5 @@ vendor/
 # others
 *.swp
 keybase.txt
+node_modules
+dist
