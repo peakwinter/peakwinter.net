@@ -7,22 +7,38 @@ block pageBody
   .jc-page-home
     .section.section__masthead
       .section-content
-        .block__mast-image
-          img(src="./assets/images/home-silhouette.jpg")
         .container
-          .block__back-frame.block__back-frame--1
-          .block__back-frame.block__back-frame--2
+          .left-column.block__home-nav
+            .nav-item
+              a(href="#about") About
+            .nav-item
+              a(href="#") Tech
+            .nav-item
+              a(href="#") Gallery
+            .nav-item
+              a(href="#contact") Contact
+          .right-column.block__mast-image
+            img(src="./assets/images/home-silhouette.jpg")
           .block__header-text
             h1.header Jacob Cook
     .section.section__about
-      .section-content
-        .block__back-frame.block__back-frame--1
+      #about.section-content
         .container
-          .block__back-frame.block__back-frame--2
           .block__about-text
             h1.header Hello.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     .section.section__footer
-      .section-content
+      #contact.section-content
         .container
-          h1.header I like lamp
+          h1.header Get in touch.
+          p
+            a.email-link(href="mailto:hello@jacobcook.net") hello@jacobcook.net
+          .block__home-nav
+            .nav-item
+              a(href="https://github.com/peakwinter") GitHub
+            .nav-item
+              a(href="https://instagram.com/peakwinter") Instagram
+            .nav-item
+              a(href="https://linkedin.com/in/peakwinter") LinkedIn
+            .nav-item
+              a(href="https://twitter.com/peakwinter") Twitter
