@@ -4,6 +4,7 @@ slug: modern-devops-django
 title: "Modern DevOps with Django"
 image: /assets/images/20180122001.jpg
 summary: Setting up a modern development, testing and deployment system for a Django application, using Docker and Gitlab CI.
+date: 2018-01-22
 tags:
   - howto
   - technology

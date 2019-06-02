@@ -1,10 +1,11 @@
 # OS X
 .DS_Store
 
-# Jekyll build
-/_site/
-vendor/
-.jekyll-metadata
+# Stork build
+node_modules
+dist
+.cache
+.tmp
 
 # webstorm
 .idea/
@@ -12,5 +13,3 @@ vendor/
 # others
 *.swp
 keybase.txt
-node_modules
-dist

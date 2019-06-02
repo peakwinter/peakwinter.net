@@ -1,7 +1,13 @@
 extends /templates/blog.pug
 
+block blogPageHead
+  title= `Blog | ${config.title}`
+
 block blogPageBody
-  ul
-    each post in posts
-      li
-        a(href=post.permalink)= post.title
+  ul.post-list
+    each post in posts.reverse()
+      li.post-list-item
+        h2
+          a(href=post.permalink)= post.title
+          br
+          small= post.date.format('D MMMM YYYY')
