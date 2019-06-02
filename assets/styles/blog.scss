@@ -1,0 +1,52 @@
+.jc-page-blog {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+
+  .header {
+    font-weight: 600;
+  }
+
+  .left-column {
+    width: 25vw;
+    padding: 40px;
+    letter-spacing: -0.05em;
+  }
+
+  .right-column {
+    flex: 1 1 auto;
+    max-width: 75vw;
+    padding: 40px;
+  }
+
+  .block__blog-logo {
+    font-weight: 500;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: 0 0 40px 20px;
+
+    .header {
+      position: relative;
+      left: -20px;
+      width: 150px;
+      text-indent: 3px;
+      background-color: #fff;
+    }
+  }
+
+  .block__blog-nav {
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 18px;
+        margin: 20px 0;
+      }
+
+      li a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,4 +1,7 @@
-extends /templates/base.pug
+extends /templates/blog.pug
 
-block pageBody
-  h1 Test
+block blogPageBody
+  ul
+    each post in posts
+      li
+        a(href=post.permalink)= post.title

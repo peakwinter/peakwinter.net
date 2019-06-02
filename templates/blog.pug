@@ -1,0 +1,23 @@
+extends /templates/base.pug
+
+block pageHead
+  link(rel="stylesheet", href="/assets/styles/blog.scss")
+
+block pageBody
+  .jc-page-blog
+    .left-column
+      .block__blog-logo-outline
+      .block__blog-logo
+        h1.header Jacob Cook
+      .block__blog-nav
+        ul
+          li.nav-item
+            a(href="/") Home
+          li.nav-item
+            a(href="/blog") Blog
+          li.nav-item
+            a(href="/#about") About
+          li.nav-item
+            a(href="/#contact") Contact
+    .right-column
+      block blogPageBody
