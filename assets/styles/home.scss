@@ -46,13 +46,12 @@
         }
 
         .block__home-nav {
-          text-align: right;
+          margin-left: 40px;
         }
 
         .block__mast-image {
           img {
-            width: 40vw;
-            max-height: 80vh;
+            max-width: 100%;
             object-fit: cover;
           }
         }
@@ -61,7 +60,7 @@
           position: absolute;
           left: 60px;
           bottom: 60px;
-          font-size: 128px;
+          font-size: 156px;
           max-width: 400px;
           line-height: 0.8;
           z-index: 30;
