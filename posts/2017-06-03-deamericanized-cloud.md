@@ -1,9 +1,9 @@
 ---
-template: post
+layout: layouts/post.pug
 slug: deamericanized-cloud
 title: "Alternatives to US Clouds for Developers"
-image: /assets/images/20170603001.jpg
-summary: For the safety of your bits and bytes, it's time to start looking elsewhere.
+image: /assets/dist/images/20170603001.jpg
+description: For the safety of your bits and bytes, it's time to start looking elsewhere.
 date: 2017-06-03
 tags:
 - privacy
@@ -19,7 +19,7 @@ So, without further ado, here's a list of companies and services you should chec
 
 ### Exoscale
 
-![](/assets/images/20170603002.jpg){.pull-right}
+![](/assets/dist/images/20170603002.jpg){.pull-right}
 
 [Exoscale](https://www.exoscale.ch) is a relatively new company based in Switzerland which offers several cloud services geared towards developers. What I like the most about them is that they seem to be trying to create a European version of Digital Ocean: providing similar services at similar prices, but with the added benefit of being based under Swiss privacy legislation, which is for the most part compatible with that of the European Union. And best of all, they now even compete favourably with DO in terms of pricing (which hasn't always been the case). Case in point: you can get a 4 GB virtual server with 2 CPU cores and 100 GB of SSD storage for $42 per month, whereas Digital Ocean's equivalent offering only gives 60 GB. You can also choose the size of your storage and are not locked in to a specific limit based on the server you choose. Pretty cool.
 
@@ -38,7 +38,7 @@ Exoscale doesn't just offer virtual servers: they have an [object storage servic
 
 ### Scaleway / Online
 
-![](/assets/images/20170603003.jpg){.pull-right}
+![](/assets/dist/images/20170603003.jpg){.pull-right}
 
 Online was founded in 1999 and is a subsidiary of a French conglomerate named Iliad which, in addition to specializing in all things "datacenter", owns a popular telecom company called Free. All of that to say that Online isn't a startup and doesn't seem to be going anywhere anytime soon.
 
@@ -60,7 +60,7 @@ Online has a popular subsidiary called [Scaleway](https://www.scaleway.com) whic
 
 ### OVH
 
-![](/assets/images/20170603004.jpg){.pull-right}
+![](/assets/dist/images/20170603004.jpg){.pull-right}
 
 [OVH](https://www.ovh.com) is one of the largest hosting companies in the world, so it's surprising how many people are not yet familiar with its offerings. They have different options depending on which market you are in, but the lion's share of their business has been built on a model of mass-produced dedicated servers in cavernous datacenters. OVH has a dizzying array of different combinations of dedicated servers depending on your exact use case. If you're willing to go DIY, you can use their servers to build your own cloud using solutions like OpenStack and the resulting prices are often much cheaper than what you are charged at an existing provider.
 
@@ -82,7 +82,7 @@ OVH has many subsidiaries targeting different segments of the market: [Kimsufi](
 
 ### Gandi
 
-![](/assets/images/20170603005.jpg){.pull-right}
+![](/assets/dist/images/20170603005.jpg){.pull-right}
 
 [Gandi](https://www.gandi.net/en) is on this list because I've been one of their biggest fans for many years now. Their motto is "No bullshit" and you can tell they really believe it. They have been very active in promoting open source projects, and give thousands of dollars away every year (in cash and services) to worthy projects they like to support. They have a very wide selection of domains and specialize in the newly-released vanity TLDs. And while they also offer VPSes, SSL certificates and shared hosting, they really shine in offering great prices for domains, a quality, dependable DNS service and expansive developer API. For me, Gandi has replaced all other providers of domain and DNS products because they are simply the best at what they do.
 

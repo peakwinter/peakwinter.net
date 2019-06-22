@@ -161,3 +161,40 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .jc-page-home {
+    .section {  
+      &__masthead {
+        .container {
+          .block__header-text {
+            font-size: 96px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .jc-page-home {
+    .section {  
+      &__masthead {
+        .container {
+          .left-column {
+            display: none;
+          }
+  
+          .right-column {
+            width: 100vw;
+            height: 100vh;
+          }
+
+          .block__header-text {
+            font-size: 64px;
+          }
+        }
+      }
+    }
+  }
+}

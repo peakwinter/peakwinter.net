@@ -1,7 +1,7 @@
-extends /templates/base.pug
+extends _includes/layouts/base.pug
 
 block pageHead
-  link(rel="stylesheet", href="/assets/styles/home.scss")
+  link(rel="stylesheet", href="/assets/dist/styles/home.css")
   title Jacob Cook
 
 block pageBody
@@ -14,12 +14,12 @@ block pageBody
               a(href="#about") About
             .nav-item
               a(href="/blog") Blog
-            .nav-item
-              a(href="#") Gallery
+            //- .nav-item
+            //-   a(href="#") Gallery
             .nav-item
               a(href="#contact") Contact
           .right-column.block__mast-image
-            img(src="/assets/images/home-silhouette.jpg")
+            img(src="/assets/dist/images/home-silhouette.jpg")
           .block__header-text
             h1.header Jacob Cook
     .section.section__about

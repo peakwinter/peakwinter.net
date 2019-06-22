@@ -1,0 +1,13 @@
+extends _includes/layouts/blog.pug
+
+block blogPageHead
+  title= `Blog | ${title}`
+
+block blogPageBody
+  ul.post-list
+    each post in collections.posts.reverse()
+      li.post-list-item
+        h2
+          a(href=post.url)= post.data.title
+          br
+          small= post.date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })

@@ -1,0 +1,23 @@
+extends blog.pug
+
+block blogPageHead
+  title= title
+
+block blogPageBody
+  .jc-blog-post
+    h1.header.post-title= title
+    if image
+      img.post-image(src=image)
+      if image_attribution
+        em !{image_attribution}
+
+    .post-content !{content}
+
+    .post-meta
+      p Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })]
+        if tags
+          p.post-tags Tagged:&nbsp;
+            each tag, idx in tags
+              span= tag
+              if idx !== (tags.length - 1)
+                | ,&nbsp;

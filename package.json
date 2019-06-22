@@ -8,10 +8,25 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "sass": "^1.20.3",
-    "stork-ssg": "1.1.0"
+    "@11ty/eleventy": "^0.8.3",
+    "highlight.js": "^9.15.8",
+    "markdown-it": "^8.4.2",
+    "markdown-it-attrs": "^2.4.1",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-footnote": "^3.0.1",
+    "moment": "^2.24.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.21.0"
   },
-  "dependencies": {
-    "highlight.js": "^9.15.8"
+  "dependencies": {},
+  "scripts": {
+    "eleventy": "eleventy",
+    "parcel": "parcel",
+    "build:front": "parcel build -d assets/dist assets/**/*",
+    "build:back": "eleventy",
+    "build": "yarn build:front && yarn build:back",
+    "watch:front": "parcel watch -d assets/dist assets/**/*",
+    "serve:back": "eleventy --serve",
+    "serve": "yarn watch:front & yarn serve:back"
   }
 }

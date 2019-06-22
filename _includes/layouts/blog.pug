@@ -1,7 +1,7 @@
-extends /templates/base.pug
+extends base.pug
 
 block pageHead
-  link(rel="stylesheet", href="/assets/styles/blog.scss")
+  link(rel="stylesheet", href="/assets/dist/styles/blog.css")
   block blogPageHead
 
 block pageBody
@@ -16,6 +16,8 @@ block pageBody
             a(href="/") Home
           li.nav-item
             a(href="/blog") Blog
+          //- li.nav-item
+          //-   a(href="#") Gallery
           li.nav-item
             a(href="/#about") About
           li.nav-item

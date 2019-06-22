@@ -1,9 +1,9 @@
 ---
-template: post
+layout: layouts/post.pug
 slug: speaking-conferences
 title: "Speaking at Conferences"
-image: /assets/images/20180115001.jpg
-summary: You don't need to be an expert or brimming with confidence - just go out and speak!
+image: /assets/dist/images/20180115001.jpg
+description: You don't need to be an expert or brimming with confidence - just go out and speak!
 date: 2018-01-15
 tags:
 - speaking
@@ -18,7 +18,7 @@ Now that I've got a couple of talks under my belt, for local meetups and nationa
 
 ### Start with Lightning Talks
 
-![](/assets/images/20180115002.png){.pull-right}
+![](/assets/dist/images/20180115002.png){.pull-right}
 
 Oftentimes at conferences (especially tech conferences) a specific period of time will be set aside for what are called "lightning talks". These are talks of anywhere from 5 to 15 minutes each that are **organized in a less rigid manner** to encourage spontaneity and a variety of interesting subjects from conference-goers. If you want to present work on one of your recent projects, but are nervous about performing in front of a large amount of people right away, or don't have quite enough material for a full presentation, lightning talks are a great way to start and to hone your skills!
 
@@ -34,7 +34,7 @@ So, with that in mind, **you don't have to be an expert to propose a talk**. You
 
 ### Have a Conversation
 
-![](/assets/images/20180115003.png){.pull-left}
+![](/assets/dist/images/20180115003.png){.pull-left}
 
 My talk at CUSEC this past weekend was on a non-technical subject: how university students just getting into the field can use Stoic philosophy to avoid common stresses and pitfalls when starting their new careers as software engineers. Even though this talk was non-technical in nature, I probably enjoyed giving it even more than my prior technical talks. Why is that?
 
