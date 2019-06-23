@@ -1,5 +1,15 @@
 extends _includes/layouts/base.pug
 
+mixin main-nav
+  .nav-item
+    a(href="#about") About
+  .nav-item
+    a(href="/blog") Blog
+  //- .nav-item
+  //-   a(href="#") Gallery
+  .nav-item
+    a(href="#contact") Contact
+
 block pageHead
   link(rel="stylesheet", href="/assets/dist/styles/home.css")
   title Jacob Cook
@@ -10,18 +20,13 @@ block pageBody
       .section-content
         .container
           .left-column.block__home-nav
-            .nav-item
-              a(href="#about") About
-            .nav-item
-              a(href="/blog") Blog
-            //- .nav-item
-            //-   a(href="#") Gallery
-            .nav-item
-              a(href="#contact") Contact
+            +main-nav
           .right-column.block__mast-image
             img(src="/assets/dist/images/home-silhouette.jpg")
           .block__header-text
             h1.header Jacob Cook
+          .mobile-only.block__home-nav
+            +main-nav
     .section.section__about
       #about.section-content
         .container

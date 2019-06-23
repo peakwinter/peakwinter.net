@@ -16,8 +16,8 @@ block blogPageBody
     .post-meta
       p Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })]
         if tags
-          p.post-tags Tagged:&nbsp;
+          p.post-tags Tagged: 
             each tag, idx in tags
               span= tag
               if idx !== (tags.length - 1)
-                | ,&nbsp;
+                | , 

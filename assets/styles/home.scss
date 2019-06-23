@@ -9,6 +9,10 @@
     letter-spacing: -0.05em;
   }
 
+  .mobile-only {
+    display: none;
+  }
+
   .block__home-nav {
     .nav-item {
       display: inline-block;
@@ -178,9 +182,17 @@
 
 @media (max-width: 650px) {
   .jc-page-home {
+    .mobile-only {
+      display: block;
+    }
+
     .section {  
       &__masthead {
+        height: 95vh;
+
         .container {
+          display: block;
+
           .left-column {
             display: none;
           }
@@ -191,7 +203,69 @@
           }
 
           .block__header-text {
+            position: initial;
             font-size: 64px;
+            margin-top: -50px;
+            margin-left: 10px;
+          }
+
+          .block__mast-image {
+            height: inherit;
+          }
+
+          .block__home-nav {
+            margin: 40px 0 40px 10px;
+
+            .nav-item {
+              margin: 0 30px 0 15px;
+            }
+          }
+        }
+      }
+
+      &__about {
+        position: initial;
+        height: initial;
+
+        .section-content {
+          position: initial;
+          height: initial;
+          top: initial;
+          left: initial;
+          transform: none;
+
+          .container {
+            position: initial;
+            height: 80vh;
+
+            .block__about-text {
+              position: initial;
+              max-width: none;
+
+              p {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &__footer {
+        .container {
+          h1.header {
+            font-size: 48px;
+            margin: 30px;
+          }
+
+          > p {
+            margin: 30px;
+          }
+        }
+
+        .block__home-nav {
+          .nav-item {
+            display: block;
+            margin: 15px;
           }
         }
       }
