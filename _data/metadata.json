@@ -1,0 +1,16 @@
+{
+  "title": "Jacob Cook",
+  "url": "https://peakwinter.net",
+  "description": "Personal website and blog of Jacob Cook",
+  "feed": {
+    "subtitle": "Personal website and blog of Jacob Cook",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "url": "https://peakwinter.net/feed.xml",
+    "id": "https://peakwinter.net/"
+  },
+  "author": {
+    "name": "Jacob Cook",
+    "email": "hello@jacobcook.net"
+  }
+}

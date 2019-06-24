@@ -1,7 +1,24 @@
 extends blog.pug
 
 block blogPageHead
-  title= title
+  title #{title} | #{metadata.title}
+  meta(property="og:title" content=title)
+  meta(name="author" content=metadata.author.name)
+  meta(property="og:locale" content="en_US")
+  meta(name="description" content=description)
+  meta(property="og:description" content=description)
+  link(rel="canonical" href=`${metadata.url}${page.url}`)
+  meta(property="og:url" content=`${metadata.url}${page.url}`)
+  meta(property="og:site_name" content=metadata.title)
+  if image
+    meta(property="og:image" content=image)
+    meta(name="twitter:card" content="summary_large_image")
+  meta(property="og:type" content="article")
+  meta(property="article:published_time" content=date.toISOString())
+  meta(name="twitter:site" content="@peakwinter")
+  meta(name="twitter:creator" content="@peakwinter")
+  script(type="application/ld+json").
+    {"@context":"http://schema.org","@type":"BlogPosting","headline":"#{title}","author":{"@type":"Person","name":"#{metadata.author.name}","image":"#{metadata.url}#{image}","datePublished":"#{date.toISOString()}","dateModified":"#{date.toISOString()}","description":"#{description}","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"#{metadata.url}/assets/dist/icons/apple-touch-icon.png"},"name":"#{metadata.author.name}"},"mainEntityOfPage":{"@type":"WebPage","@id":"#{metadata.url}#{page.url}"},"url":"#{metadata.url}#{page.url}"}}
 
 block blogPageBody
   .jc-blog-post
@@ -18,6 +35,7 @@ block blogPageBody
         if tags
           p.post-tags Tagged: 
             each tag, idx in tags
-              span= tag
-              if idx !== (tags.length - 1)
-                | , 
+              if tag !== 'posts'
+                span= tag
+                if idx !== (tags.length - 1)
+                  | , 

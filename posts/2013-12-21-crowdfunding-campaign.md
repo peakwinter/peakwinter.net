@@ -37,7 +37,7 @@ So during that first week of the campaign, I saw a great outpouring of support f
 
 In the end, this push did result in the key for the campaign, and it was the combination of a refined message *and* a great deal of luck. Coincidentally it was an outlet that I had only sent one message to: VentureBeat. [^2] They decided to do a feature on the project. My face was quickly plastered all over their front page, and it was the most popular story on the site for at least two or three days.
 
-![VentureBeat home page](/assets/dist/images/20131221001.png)
+![VentureBeat home page](/assets/images/20131221001.png)
 
 From there all of the other outlets that wrote about me did so without me reaching out first. And *then* I was beating them away with a stick. But the life lesson was that I'm not invincible. I can't control everything. There are problems that I simply cannot solve, no matter how small and well-commented my shell scripts are. And sometimes it is important to ask for help and add a bit of padding to one's expectations if you want to make it out with your nerves intact.
 
@@ -47,7 +47,7 @@ I should point out here that *I had no reasonable clue that the project was goin
 
 On top of that, the funding site set up for the campaign was [entirely developed and operated myself](https://github.com/peakwinter/firestarter). I started work on it a mere couple weeks before the campaign was about to take off. It was pushed into production right as the buzzer sounded to begin the campaign on November 4th. I am not a newcomer to Python or Django, but running a site that was to get several thousand hits per day, managing a database of orders and other information, interacting with payment APIs for multiple providers? All of that was pretty new to me.
 
-![Screenshot of the funding site](/assets/dist/images/20131221002.png)
+![Screenshot of the funding site](/assets/images/20131221002.png)
 
 On top of *that*, I started the entire campaign in the month of November. A time when a lot of people are doing their Christmas shopping and are not as much concerned with ordering experimental goodies that they won't even see until next year. Also, a time where I start my year end finals in University, something that other students can understand is not the most leisurely experience in the world. Adding the full-time job of getting media coverage and maintaining the campaign website to an already busy plate was an interesting experience to say the least.
 

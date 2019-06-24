@@ -9,6 +9,8 @@
   "private": true,
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "browser-sync": "^2.26.7",
+    "fast-glob": "^3.0.2",
     "highlight.js": "^9.15.8",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.4.1",
@@ -19,14 +21,20 @@
     "sass": "^1.21.0"
   },
   "dependencies": {},
+  "alias": {
+    "assets": "./assets",
+    "includes": "./_includes",
+    "data": "./_data"
+  },
   "scripts": {
     "eleventy": "eleventy",
     "parcel": "parcel",
-    "build:front": "parcel build -d assets/dist assets/**/*",
-    "build:back": "eleventy",
-    "build": "yarn build:front && yarn build:back",
-    "watch:front": "parcel watch -d assets/dist assets/**/*",
-    "serve:back": "eleventy --serve",
-    "serve": "yarn watch:front & yarn serve:back"
+    "build:front": "parcel build --out-dir dist --cache-dir .tmp/.cache '.tmp/parcel/**/*.html'",
+    "build:back": "eleventy --quiet --output .tmp/parcel",
+    "build": "yarn build:back && yarn build:front",
+    "watch:front": "parcel serve --out-dir dist --cache-dir .tmp/.cache '.tmp/11ty/*.html'",
+    "watch:back": "eleventy --quiet --watch --output .tmp/11ty",
+    "serve": "yarn watch:back & yarn watch:front & yarn serve:bs",
+    "serve:bs": "browser-sync start --config .bs-config.js --proxy localhost:1234"
   }
 }

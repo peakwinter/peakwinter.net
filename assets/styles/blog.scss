@@ -3,7 +3,7 @@
 .jc-page-blog {
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  color: #111;
+  color: #333;
 
   img {
     &.pull-left {
@@ -21,6 +21,11 @@
 
   .header {
     font-weight: 600;
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
   }
 
   .left-column {
@@ -38,7 +43,7 @@
     font-weight: 500;
     width: 200px;
     height: 200px;
-    border: 1px solid #111;
+    border: 1px solid #333;
     margin: 0 0 40px 20px;
 
     .header {
@@ -60,7 +65,7 @@
       }
 
       li a {
-        color: #111;
+        color: #333;
         text-decoration: none;
       }
     }
@@ -114,7 +119,7 @@
 
     .post-meta {
       margin: 80px 0 60px 0;
-      border: 1px solid #111;
+      border: 1px solid #333;
       padding: 20px;
 
       p {
@@ -134,7 +139,7 @@
 
       &.post-image {
         margin-bottom: 20px;
-        border: 1px solid #111;
+        border: 1px solid #333;
       }
     }
 

@@ -1,18 +1,17 @@
 extends base.pug
 
 block pageHead
-  link(rel="stylesheet", href="/assets/dist/styles/blog.css")
+  link(rel="stylesheet", href="~/assets/styles/blog.scss")
   block blogPageHead
 
 block pageBody
   .jc-page-blog
     .left-column
       .block__blog-logo
-        h1.header Jacob Cook
+        h1.header
+          a(href="/") Jacob Cook
       .block__blog-nav
         ul
-          li.nav-item
-            a(href="/") Home
           li.nav-item
             a(href="/blog") Blog
           //- li.nav-item

@@ -2,7 +2,7 @@
 layout: layouts/post.pug
 slug: swarm-cloud
 title: "A Perfect Personal Cloud with Docker Swarm"
-image: /assets/dist/images/20180104001.jpg
+image: /assets/images/20180104001.jpg
 description: Setting up a redundant and powerful personal cloud using Docker containers.
 date: 2018-01-04
 tags:
@@ -23,7 +23,7 @@ Beyond that experience, I used the [Funky Penguin's Geek Cookbook](https://geek-
 
 ### Why Docker Swarm?
 
-![](/assets/dist/images/20180104003.png){.pull-right}
+![](/assets/images/20180104003.png){.pull-right}
 
 When they are set up to work in a specific manner, Docker containers can be a great way to generalize the application deployments you manage and to ensure that they can be installed and moved around in a modular way. All of the application's code and dependencies live inside the individual Docker containers, and they can talk to other linked containers that will handle the databases, memory caches or other basic needs. In the setup that I use, these containers work together in what is called a **stack**. A Docker stack setup is essentially the same thing as using `docker-compose`; the main difference is in how Docker chooses to deploy individual containers in a stack across a Swarm.
 
@@ -31,11 +31,11 @@ A **[Docker Swarm](https://docs.docker.com/engine/swarm/)** is a cluster of serv
 
 ### The Setup
 
-![](/assets/dist/images/20170603004.jpg){.pull-left}
+![](/assets/images/20170603004.jpg){.pull-left}
 
 I am presently hosting three servers on **[OVH's Public Cloud](https://www.ovh.com/ca/en/public-cloud/instances/)** for all of my infrastructure.
 
-My choice of OVH was based on three factors. First, I needed a dependable server host that used recognized technology. OVH's Public Cloud uses [OpenStack](https://www.openstack.org) technology and is a more dependable solution than their basic VPSes, with more guaranteed resources. Second, I wanted something that wouldn't break the bank &mdash; OVH bills in Canadian dollars and is very reasonably priced compared with the competition. Lastly, it's important to me that my data is stored with a [non-US company](/blog/deamericanized-cloud/) &mdash; OVH is based in France and maintains its largest datacenter just south of Montréal (where I live!).
+My choice of OVH was based on three factors. First, I needed a dependable server host that used recognized technology. OVH's Public Cloud uses [OpenStack](https://www.openstack.org) technology and is a more dependable solution than their basic VPSes, with more guaranteed resources. Second, I wanted something that wouldn't break the bank &mdash; OVH bills in Canadian dollars and is very reasonably priced compared with the competition. Lastly, it's important to me that my data is stored with a [non-US company]({{ metadata.url }}/blog/deamericanized-cloud/) &mdash; OVH is based in France and maintains its largest datacenter just south of Montréal (where I live!).
 
 ### Redundancy
 
@@ -51,7 +51,7 @@ The first stack that I deployed to my swarm is called **[swarmprom](https://gith
 
 ### Serving
 
-![](/assets/dist/images/20180104002.png){.pull-right}
+![](/assets/images/20180104002.png){.pull-right}
 
 As I mentioned before, the Docker Swarm transparently handles the networking between containers and services, as well as routes incoming communications from the outside world to the proper destination container. When it comes to accessing these services from the Web, each node is set up to run a **[Traefik](https://traefik.io) web proxy** container. This container will automatically monitor all other services on its respective node, and configure itself to proxy the HTTP requests to and from the appropriate container using filters (by domain name, path, etc). The best part is that it also requests Let's Encrypt TLS certificates as necessary, and stores them in a centrally-managed [Consul](https://www.consul.io) service which is itself also stored on the Ceph filesystem. Neat!
 

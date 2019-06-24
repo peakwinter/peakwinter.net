@@ -2,4 +2,4 @@ FROM nginx:alpine
 
 EXPOSE 80
 
-COPY _site/ /usr/share/nginx/html
+COPY dist/ /usr/share/nginx/html

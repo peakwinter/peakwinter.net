@@ -3,11 +3,10 @@
 
 # Eleventy build
 node_modules
-_site
+dist
 
 # Parcel build
-.cache
-assets/dist
+.tmp
 
 # webstorm
 .idea/

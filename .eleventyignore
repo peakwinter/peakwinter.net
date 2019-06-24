@@ -1,2 +1,5 @@
 node_modules
 README.md
+dist
+package.json
+posts/posts.json

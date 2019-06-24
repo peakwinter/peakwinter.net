@@ -2,7 +2,7 @@
 layout: layouts/post.pug
 slug: open-source-fail
 title: "How to Fail at Open Source"
-image: /assets/dist/images/20170521001.jpg
+image: /assets/images/20170521001.jpg
 image_attribution: Given enough neglect, your projects will start to look like this soon enough. (<a href="https://www.flickr.com/photos/photosvincent/15791902902">Vincent Ferron</a>)
 description: If the price you're paying is burnout, the product you're getting is worthless.
 date: 2017-05-22

@@ -1,5 +1,6 @@
 const highlight = require('highlight.js');
-const moment = require('moment');
+const glob = require('fast-glob');
+const path = require('path');
 const markdownIt = require('markdown-it');
 const markdownItEmoji = require('markdown-it-emoji');
 const markdownItAttrs = require('markdown-it-attrs');
@@ -8,8 +9,9 @@ const markdownItFootnote = require('markdown-it-footnote');
 module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.addPassthroughCopy('files');
-  eleventyConfig.addPassthroughCopy('assets/dist');
+
+  const files = glob.sync(path.join(process.cwd(), "assets/**/*"));
+  const exts = files.map(file => path.extname(file).replace('.', ''));
 
   const markdownLib = markdownIt({
     html: true,
@@ -26,23 +28,19 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAttrs)
     .use(markdownItFootnote);
   eleventyConfig.setLibrary('md', markdownLib);
+  eleventyConfig.setTemplateFormats(['md', 'pug'].concat(exts));
+  eleventyConfig.addPassthroughCopy('files');
 
   return {
-    templateFormats: [
-      "md",
-      "pug"
-    ],
-
     pathPrefix: "/",
-
+    passthroughFileCopy: true,
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "pug",
-    dataTemplateEngine: "pug",
+    dataTemplateEngine: "njk",
     dir: {
       input: ".",
       includes: "_includes",
-      data: "_data",
-      output: "_site"
+      data: "_data"
     }
   }
 }

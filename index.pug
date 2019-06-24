@@ -1,17 +1,22 @@
 extends _includes/layouts/base.pug
 
-mixin main-nav
-  .nav-item
-    a(href="#about") About
-  .nav-item
-    a(href="/blog") Blog
-  //- .nav-item
-  //-   a(href="#") Gallery
-  .nav-item
-    a(href="#contact") Contact
-
 block pageHead
-  link(rel="stylesheet", href="/assets/dist/styles/home.css")
+  link(rel="stylesheet", href="~/assets/styles/home.scss")
+  meta(property="og:title" content=metadata.title)
+  meta(name="author" content=metadata.title)
+  meta(property="og:locale" content="en_US")
+  meta(name="description" content=metadata.description)
+  meta(property="og:description" content=metadata.description)
+  link(rel="canonical" href=`${metadata.url}${page.url}`)
+  meta(property="og:url" content=`${metadata.url}${page.url}`)
+  meta(property="og:site_name" content=metadata.title)
+  meta(property="og:image" content=`${metadata.url}/assets/images/home-silhouette.jpg`)
+  meta(name="twitter:card" content="summary_large_image")
+  meta(property="og:type" content="website")
+  meta(name="twitter:site" content="@peakwinter")
+  meta(name="twitter:creator" content="@peakwinter")
+  script(type="application/ld+json").
+    {"@context":"http://schema.org","@type":"WebPage","headline":"#{metadata.title}","author":{"@type":"Person","name":"#{metadata.author.name}","image":"#{metadata.url}/assets/images/home-silhouette.jpg","description":"#{description}","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"#{metadata.url}/assets/icons/apple-touch-icon.png"},"name":"#{metadata.author.name}"},"url":"#{metadata.url}#{page.url}"}}
   title Jacob Cook
 
 block pageBody
@@ -22,7 +27,7 @@ block pageBody
           .left-column.block__home-nav
             +main-nav
           .right-column.block__mast-image
-            img(src="/assets/dist/images/home-silhouette.jpg")
+            img(src="~/assets/images/home-silhouette.jpg")
           .block__header-text
             h1.header Jacob Cook
           .mobile-only.block__home-nav
@@ -32,7 +37,7 @@ block pageBody
         .container
           .block__about-text
             h1.header Hello.
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            p I'm a Montréal-based software engineer (currently with #[a(href="https://busbud.com") Busbud]), maker and open source contributor. My mission is to help people with technology and connect with them through media and projects like #[a(href="https://slowne.ws") slowne.ws]. Aside from that I'm interested in entrepreneurship, photography, music, travel and environmental issues.
     .section.section__footer
       #contact.section-content
         .container
@@ -48,3 +53,8 @@ block pageBody
               a(href="https://linkedin.com/in/peakwinter") LinkedIn
             .nav-item
               a(href="https://twitter.com/peakwinter") Twitter
+            .nav-item
+              a(href="/files/cv.pdf") CV
+          .block__home-nav
+            .nav-item
+              a(href="/files/gpg.asc") GPG
