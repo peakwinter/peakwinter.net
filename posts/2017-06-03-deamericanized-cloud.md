@@ -6,8 +6,8 @@ image: /assets/images/20170603001.jpg
 description: For the safety of your bits and bytes, it's time to start looking elsewhere.
 date: 2017-06-03
 tags:
+- tech
 - privacy
-- technology
 - politics
 ---
 

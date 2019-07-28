@@ -6,8 +6,9 @@ image: /assets/images/20180115001.jpg
 description: You don't need to be an expert or brimming with confidence - just go out and speak!
 date: 2018-01-15
 tags:
+- tech
+- personal
 - speaking
-- personal growth
 - careers
 - advice
 ---

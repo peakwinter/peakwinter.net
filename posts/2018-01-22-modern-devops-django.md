@@ -73,7 +73,7 @@ CMD python manage.py migrate && uwsgi --ini=/site/uwsgi.ini
 
 #### Docker Compose configuration
 
-We can now build our application with `docker build -t myapp .` and run it with `docker run -it myapp`. But in the case of our development environment, we are going to use Docker Compose in practice. The Docker Compose configuration below is sufficient for our development environment, and will serve as a base for our configurations in staging and production, which can include things like Celery workers and monitoring services.
+We can now build our application with <kbd>docker build -t myapp .</kbd> and run it with <kbd>docker run -it myapp</kbd>. But in the case of our development environment, we are going to use Docker Compose in practice. The Docker Compose configuration below is sufficient for our development environment, and will serve as a base for our configurations in staging and production, which can include things like Celery workers and monitoring services.
 
 ```yaml
 version: '3'
@@ -109,7 +109,7 @@ services:
 
 This is a pretty basic configuration - all we are doing is setting a startup command for our app (similar to the entrypoint in our Docker container, except this time we are going to run Django's internal dev server instead) and initializing PostgreSQL and Redis containers that will be linked with it. It's important to note that `volumes` line in our app service &mdash; this is going to bind the current directory of source code on our host machine to the installation folder inside the container. That way we can make changes to the code locally and still use the automatic reloading feature of the Django dev server.
 
-At this point, all we need to do is `docker-compose up`, and our Django application will be listening on port 8000, just as if we were running it from a virtualenv locally. This configuration is perfectly suitable for **developer environments** &mdash; all anyone needs to do to get started using the exact same environment as you is to clone the Git repository and run `docker-compose up`!
+At this point, all we need to do is <kbd>docker-compose up</kbd>, and our Django application will be listening on port 8000, just as if we were running it from a virtualenv locally. This configuration is perfectly suitable for **developer environments** &mdash; all anyone needs to do to get started using the exact same environment as you is to clone the Git repository and run <kbd>docker-compose up</kbd>!
 
 #### Testing and Production
 
@@ -119,7 +119,7 @@ For testing your application, whether that's on your local machine or via Gitlab
 command: bash -c "coverage run --source='.' manage.py test myapp && coverage report"
 ```
 
-Then, I run my test suite locally with `docker-compose -p test -f docker-compose.test.yml up`.
+Then, I run my test suite locally with <kbd>docker-compose -p test -f docker-compose.test.yml up</kbd>.
 
 For production and staging environments, I do the same thing &mdash; duplicate the file with the few changes I need to make for the environment in particular. In this case, for production, I don't want to provide a build path &mdash; I want to tell Docker that it needs to take my application from the container registry each time it starts up. To do so, remove the `build` directive and add an `image` one like so:
 
@@ -240,11 +240,11 @@ deploy_stg:
     - ssh deploy@$DEPLOY_SERVER_URL "cd $DEPLOY_PATH/staging && docker stack deploy -c docker-compose.yml --with-registry-auth myapp_staging"
 ```
 
-Now the *really* fun part! **Deploying** our application can be done in a variety of ways. In my case, it is done by SSHing to a master in my [Docker Swarm](/blog/swarm-cloud), copying over the Compose configurations, then deploying them as a [Stack](https://docs.docker.com/docker-cloud/apps/stacks/). The same idea can also be used for a deployment to any Docker server &mdash; just replace the `docker stack deploy` with a `docker-compose up` and the same basic concept holds true.
+Now the *really* fun part! **Deploying** our application can be done in a variety of ways. In my case, it is done by SSHing to a master in my [Docker Swarm](/blog/swarm-cloud), copying over the Compose configurations, then deploying them as a [Stack](https://docs.docker.com/docker-cloud/apps/stacks/). The same idea can also be used for a deployment to any Docker server &mdash; just replace the <kbd>docker stack deploy</kbd> with a <kbd>docker-compose up</kbd> and the same basic concept holds true.
 
 In order to properly authenticate with our server, Gitlab CI needs to know where to find an SSH private key. You can set this up as a secret variable within your Gitlab CI repository itself. Then, as we see in the `before_script` section, we do some magic that tells Gitlab to take the value of that secret variable and to insert it into our container as an SSH private key file.
 
-Our `script` section is very minimal, since all we are doing is copying over our Docker Compose configuration file, then telling the Docker daemon on our server to run it. If you are using Docker Swarm and the `docker stack deploy` command, this one command will intelligently restart different components of the stack if their configurations have changed or if there are newer versions of their images available on our container registry (which is always the case here, since we just submitted a new release to it!).
+Our `script` section is very minimal, since all we are doing is copying over our Docker Compose configuration file, then telling the Docker daemon on our server to run it. If you are using Docker Swarm and the <kbd>docker stack deploy</kbd> command, this one command will intelligently restart different components of the stack if their configurations have changed or if there are newer versions of their images available on our container registry (which is always the case here, since we just submitted a new release to it!).
 
 ### Conclusion
 

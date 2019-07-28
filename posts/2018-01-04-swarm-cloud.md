@@ -57,7 +57,7 @@ As I mentioned before, the Docker Swarm transparently handles the networking bet
 
 ### Summary
 
-With all of these components working in harmony, we can have a system that only requires a `docker-compose.yml` file to be stored on your server, and a `docker stack deploy` command to be executed; it will subsequently provide an automatically monitored, backed-up, secured (with TLS), replicated and load-balanced application, tolerant of passing failures and sudden performance spikes.
+With all of these components working in harmony, we can have a system that only requires a `docker-compose.yml` file to be stored on your server, and a <kbd>docker stack deploy</kbd> command to be executed; it will subsequently provide an automatically monitored, backed-up, secured (with TLS), replicated and load-balanced application, tolerant of passing failures and sudden performance spikes.
 
 I've **open-sourced the stack configurations** that I use with my services, you can find them [on my Github page](https://github.com/peakwinter/stacks). For many more useful services and a very thorough, technical explanation of the different components of this stack, you can check out [Funky Penguin's Geek Cookbook](https://geek-cookbook.funkypenguin.co.nz).
 

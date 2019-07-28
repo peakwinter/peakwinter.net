@@ -7,10 +7,10 @@ image_attribution: Given enough neglect, your projects will start to look like t
 description: If the price you're paying is burnout, the product you're getting is worthless.
 date: 2017-05-22
 tags:
+- tech
 - open source
 - projects
 - development
-- technology
 - personal
 ---
 

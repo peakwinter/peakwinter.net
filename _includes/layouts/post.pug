@@ -22,20 +22,22 @@ block blogPageHead
 
 block blogPageBody
   .jc-blog-post
-    h1.header.post-title= title
+    h1.jc-heavy-title.post-title= title
     if image
-      img.post-image(src=image)
-      if image_attribution
-        em !{image_attribution}
+      figure.figure  
+        img.figure-img.img-fluid.post-image(src=image)
+        if image_attribution
+          figcaption.figure-caption !{image_attribution}
 
     .post-content !{content}
 
-    .post-meta
-      p Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })]
-        if tags
-          p.post-tags Tagged: 
-            each tag, idx in tags
-              if tag !== 'posts'
-                span= tag
-                if idx !== (tags.length - 1)
-                  | , 
+    .card.post-meta
+      .card-body
+        p.card-text Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })]
+          if tags
+            p.card-text.post-tags Tagged: 
+              each tag, idx in tags
+                if tag !== 'posts'
+                  a(href=`/blog/tags/${tag}/`)= tag
+                  if idx !== (tags.length - 1)
+                    | , 

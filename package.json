@@ -20,7 +20,11 @@
     "parcel-bundler": "^1.12.3",
     "sass": "^1.21.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3",
+    "popper.js": "^1.14.7"
+  },
   "alias": {
     "assets": "./assets",
     "includes": "./_includes",
@@ -29,10 +33,10 @@
   "scripts": {
     "eleventy": "eleventy",
     "parcel": "parcel",
-    "build:front": "parcel build --out-dir dist --cache-dir .tmp/.cache '.tmp/parcel/**/*.html'",
+    "build:front": "parcel build --out-dir dist --cache-dir .tmp/.cache --public-url http://localhost '.tmp/parcel/**/*.html'",
     "build:back": "eleventy --quiet --output .tmp/parcel",
     "build": "yarn build:back && yarn build:front",
-    "watch:front": "parcel serve --out-dir dist --cache-dir .tmp/.cache '.tmp/11ty/*.html'",
+    "watch:front": "parcel serve --out-dir dist --cache-dir .tmp/.cache '.tmp/11ty/*.html' '.tmp/11ty/**/*.html'",
     "watch:back": "eleventy --quiet --watch --output .tmp/11ty",
     "serve": "yarn watch:back & yarn watch:front & yarn serve:bs",
     "serve:bs": "browser-sync start --config .bs-config.js --proxy localhost:1234"

@@ -6,19 +6,30 @@ block pageHead
 
 block pageBody
   .jc-page-blog
-    .left-column
-      .block__blog-logo
-        h1.header
-          a(href="/") Jacob Cook
-      .block__blog-nav
-        ul
-          li.nav-item
-            a(href="/blog") Blog
-          //- li.nav-item
-          //-   a(href="#") Gallery
-          li.nav-item
-            a(href="/#about") About
-          li.nav-item
-            a(href="/#contact") Contact
-    .right-column
-      block blogPageBody
+    .container-fluid
+      .row
+        .jc-blog-sidebar.col-xl-2
+          .block__blog-logo
+            h1.header.jc-heavy-title
+              a(href="/") Jacob Cook
+            ul.block__blog-nav
+              li.nav-item
+                a(href="/blog") Blog
+                //- ul.nav-sub
+                //-   li.nav-item
+                //-     a(href="/blog/tags/tech/") Tech
+                //-   li.nav-item
+                //-     a(href="/blog/tags/mobility/") Mobility
+                //-   li.nav-item
+                //-     a(href="/blog/tags/media/") Media
+                //-   li.nav-item
+                //-     a(href="/blog/tags/travel/") Travel
+              li.nav-item
+                a(href="/#about") About
+              li.nav-item
+                a(href="/#contact") Contact
+          .jc-scroll
+            a(href='#top') scroll up
+        .jc-blog-main.col-xl
+          block blogPageBody
+  script(src="~/assets/js/blog.js")
