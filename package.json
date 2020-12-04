@@ -12,7 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.10.0",
     "browser-sync": "^2.26.7",
     "fast-glob": "^3.0.2",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.4.1",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.4.1",
     "markdown-it-emoji": "^1.4.0",
