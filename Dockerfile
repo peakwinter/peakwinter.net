@@ -1,7 +1,8 @@
-FROM node:alpine-14 AS builder
+FROM node:14-alpine AS builder
 
 ARG NODE_ENV
 WORKDIR /code
+RUN apk add --no-cache build-base python3
 ADD package.json yarn.lock /code/
 RUN yarn --pure-lockfile
 ENV NODE_ENV=${NODE_ENV:-production}
