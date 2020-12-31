@@ -34,7 +34,7 @@
   "scripts": {
     "eleventy": "eleventy",
     "parcel": "parcel",
-    "build:front": "parcel build --out-dir dist --cache-dir .tmp/.cache --public-url http://localhost '.tmp/parcel/**/*.html'",
+    "build:front": "parcel build --out-dir dist --cache-dir .tmp/.cache --public-url https://peakwinter.net '.tmp/parcel/**/*.html'",
     "build:back": "eleventy --quiet --output .tmp/parcel",
     "build": "yarn build:back && yarn build:front",
     "watch:front": "parcel serve --out-dir dist --cache-dir .tmp/.cache '.tmp/11ty/*.html' '.tmp/11ty/**/*.html'",
