@@ -19,6 +19,7 @@ $all-colors: $blue, $red, $lime, $orange, $teal, $pink, $purple, $yellow, $green
   background: $bgcolor;
   color: $txtcolor;
   box-shadow: $xpadding 0 0 $bgcolor, (-$xpadding) 0 0 $bgcolor;
+  box-decoration-break: clone;
 }
 
 @mixin color-children($start: 1) {
@@ -172,7 +173,7 @@ pre {
     }
 
     .post-title {
-      font-size: 72px;
+      font-size: 62px;
       line-height: 1.1;
       margin-bottom: 20px;
     }

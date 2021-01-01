@@ -33,7 +33,7 @@ block blogPageBody
 
     .card.post-meta
       .card-body
-        p.card-text Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })]
+        p.card-text Originally posted #[strong= date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })]
           if tags
             p.card-text.post-tags Tagged: 
               each tag, idx in tags
